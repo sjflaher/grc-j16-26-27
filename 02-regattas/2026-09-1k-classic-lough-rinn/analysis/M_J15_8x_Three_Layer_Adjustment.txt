@@ -1,0 +1,142 @@
+====================================================================================================
+THREE-LAYER ADJUSTMENT ANALYSIS - M J15 8x+
+====================================================================================================
+
+Heat Statistics:
+  Final 1: 3:24.6 average
+  Final 2: 3:34.2 average
+  Overall: 3:29.4 average
+  Difference: 9.62 seconds
+
+Lane Bias (from Saturday PM analysis):
+  Lane 1: -3.17s (FASTER)
+  Lane 2: +1.71s (SLOWER)
+  Lane 3: -1.58s (FASTER)
+  Lane 4: -5.22s (FASTER)
+  Lane 5: -0.59s (FASTER)
+  Lane 6: +15.59s (SLOWER)
+
+====================================================================================================
+LAYER 1: RAW TIMES (No Adjustments)
+====================================================================================================
+
+Rank   Crew                 Heat         Lane   Time        
+------------------------------------------------------------
+1      Enniskillen A        Final 1      4      3:12.9      
+2      Castleconnel         Final 1      6      3:17.5      
+3      Methodist            Final 2      5      3:20.0      
+4      St Josephs           Final 1      3      3:21.9      
+5      Col Iognaid          Final 1      1      3:30.9      
+6      St. Michaels         Final 2      3      3:33.5      
+7      Pres Cork            Final 2      1      3:35.2      
+8      Enniskillen B        Final 1      2      3:39.6      
+9      Galway               Final 2      4      3:40.1        ← GALWAY
+10     Athlone              Final 2      2      3:42.1      
+
+====================================================================================================
+LAYER 2: HEAT-ADJUSTED (Accounts for heat speed differences)
+====================================================================================================
+
+Rank   Crew                 Heat         Lane   Raw          Heat Adj     Adjusted    
+------------------------------------------------------------------------------------------
+1      Methodist            Final 2      5      3:20.0        +4.81s    3:15.2      
+2      Enniskillen A        Final 1      4      3:12.9        -4.81s    3:17.7      
+3      Castleconnel         Final 1      6      3:17.5        -4.81s    3:22.3      
+4      St Josephs           Final 1      3      3:21.9        -4.81s    3:26.7      
+5      St. Michaels         Final 2      3      3:33.5        +4.81s    3:28.7      
+6      Pres Cork            Final 2      1      3:35.2        +4.81s    3:30.4      
+7      Galway               Final 2      4      3:40.1        +4.81s    3:35.3        ← GALWAY
+8      Col Iognaid          Final 1      1      3:30.9        -4.81s    3:35.7      
+9      Athlone              Final 2      2      3:42.1        +4.81s    3:37.3      
+10     Enniskillen B        Final 1      2      3:39.6        -4.81s    3:44.4      
+
+====================================================================================================
+LAYER 3: HEAT + LANE ADJUSTED (Accounts for both heat AND lane bias)
+====================================================================================================
+
+Rank   Crew                 Heat         Lane   Raw          Heat     Lane     Final Adj   
+----------------------------------------------------------------------------------------------------
+1      Castleconnel         Final 1      6      3:17.5       -4.81s  +15.59s  3:06.7      
+2      Methodist            Final 2      5      3:20.0       +4.81s  -0.59s  3:15.8      
+3      Enniskillen A        Final 1      4      3:12.9       -4.81s  -5.22s  3:22.9      
+4      St Josephs           Final 1      3      3:21.9       -4.81s  -1.58s  3:28.3      
+5      St. Michaels         Final 2      3      3:33.5       +4.81s  -1.58s  3:30.3      
+6      Pres Cork            Final 2      1      3:35.2       +4.81s  -3.17s  3:33.6      
+7      Athlone              Final 2      2      3:42.1       +4.81s  +1.71s  3:35.6      
+8      Col Iognaid          Final 1      1      3:30.9       -4.81s  -3.17s  3:38.9      
+9      Galway               Final 2      4      3:40.1       +4.81s  -5.22s  3:40.5        ← GALWAY
+10     Enniskillen B        Final 1      2      3:39.6       -4.81s  +1.71s  3:42.7      
+
+====================================================================================================
+GALWAY POSITION ANALYSIS
+====================================================================================================
+
+Raw Times (Layer 1):
+  Rank: 9/10
+  Time: 3:40.1
+
+Heat-Adjusted (Layer 2):
+  Rank: 7/10
+  Time: 3:35.3
+  Change: +2 positions
+
+Heat + Lane Adjusted (Layer 3):
+  Rank: 9/10
+  Time: 3:40.5
+  Galway raced in Lane 4 (bias: -5.22s)
+  Change from raw: +0 positions
+  Change from heat-adjusted: -2 positions
+
+====================================================================================================
+KEY INSIGHTS
+====================================================================================================
+
+1. HEAT BIAS:
+   Final 2 was 9.62s slower than Final 1 on average
+   This accounts for ~4.8s of Galway's time
+
+2. LANE BIAS:
+   Lane 4 (where Galway raced) had a 5.22s ADVANTAGE in Saturday PM races
+   This is one of the fastest lanes overall
+
+3. COMBINED EFFECT:
+   After full adjustment, Galway drops from 9th to 9th
+   Galway benefited from favorable lane conditions
+
+4. LANE 4 ADVANTAGE:
+   Lane 4 showed consistently fast times across the regatta:
+   - Saturday AM: -2.0s average
+   - Saturday PM: -5.2s average (STRONGEST bias)
+   This suggests Lane 4 had:
+   - Better wind protection
+   - Favorable current
+   - Or better water conditions
+
+====================================================================================================
+RECOMMENDATIONS FOR CREW SELECTION
+====================================================================================================
+
+When using these adjustments for selection decisions:
+
+1. PRESENT ALL THREE LAYERS
+   - Show raw times (what actually happened)
+   - Show heat-adjusted (accounts for random heat assignment)
+   - Show full-adjusted (most fair comparison of crew ability)
+
+2. WEIGHT THE ADJUSTMENTS
+   - If lane bias is consistent (appears in multiple periods) → Give it full weight
+   - If lane bias is period-specific → Consider it but with caution
+   - Lane 4's advantage was consistent across periods → HIGH confidence
+
+3. STATISTICAL CAVEAT
+   - Lane bias did NOT reach statistical significance (p > 0.05)
+   - This is partly due to small sample sizes
+   - BUT the effect size is large and consistent
+   - Recommend: Present both raw and adjusted rankings
+
+4. FINAL RECOMMENDATION
+   Use Layer 3 (Heat + Lane adjusted) as the PRIMARY ranking
+   but show all three layers for transparency.
+
+
+Analysis saved to ~/Documents/GRC/M_J15_8x_Three_Layer_Adjustment.txt

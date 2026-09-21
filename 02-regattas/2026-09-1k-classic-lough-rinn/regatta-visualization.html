@@ -1,0 +1,1279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1K Classic Retro — GRC J16 2026/27</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        :root {
+            --maroon: #460C85;
+            --maroon-dark: #2d0855;
+            --maroon-bright: #5a14aa;
+            --ink: #1d1d24;
+            --grey: #5c5c66;
+            --paper: #faf8f5;
+            --cream: #f1ece4;
+            --gold: #c9a227;
+            --white: #ffffff;
+            --galway-red: #8b0000;
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background: var(--paper);
+            color: var(--ink);
+            min-height: 100vh;
+            padding: 4vh 4vw;
+        }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 4vh;
+        }
+        .kicker {
+            font-size: 0.9rem;
+            letter-spacing: 0.35em;
+            text-transform: uppercase;
+            color: var(--gold);
+            font-weight: 700;
+            margin-bottom: 1vh;
+        }
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--maroon);
+            letter-spacing: -0.01em;
+            margin-bottom: 1vh;
+        }
+        h1::after {
+            content: "";
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: var(--gold);
+            margin: 1.5vh auto 0;
+            border-radius: 2px;
+        }
+        .subtitle {
+            color: var(--grey);
+            font-size: 1rem;
+            margin-top: 1vh;
+        }
+        .legend {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 4vh;
+            flex-wrap: wrap;
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9rem;
+            color: var(--grey);
+        }
+        .legend-color {
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            border: 2px solid transparent;
+            box-sizing: border-box;
+            flex-shrink: 0;
+        }
+        .legend-color.galway { width: 18px; height: 18px; border-width: 3px; }
+        .legend { gap: 14px 22px; }
+
+        .day-section {
+            margin-bottom: 5vh;
+        }
+        .day-header {
+            text-align: center;
+            margin-bottom: 3vh;
+            padding: 2vh 0;
+            border-bottom: 2px solid var(--cream);
+        }
+        .day-header h2 {
+            font-size: 1.6rem;
+            color: var(--maroon);
+            font-weight: 700;
+        }
+        .day-header .day-subtitle {
+            color: var(--grey);
+            font-size: 0.9rem;
+            margin-top: 0.5vh;
+        }
+        .events-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 4vh;
+        }
+        .event-card {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 3vh 3vw;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+        .event-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 2.5vh;
+            flex-wrap: wrap;
+            gap: 2vh;
+        }
+        .event-title-section {
+            flex: 1;
+        }
+        .event-title {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: var(--maroon);
+            margin-bottom: 0.5vh;
+        }
+        .event-subtitle {
+            font-size: 0.85rem;
+            color: var(--grey);
+        }
+        .event-stats {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .stat {
+            text-align: center;
+            padding: 10px 18px;
+            background: var(--cream);
+            border-radius: 8px;
+        }
+        .stat-value {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--maroon);
+        }
+        .stat-label {
+            font-size: 0.7rem;
+            color: var(--grey);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .toggle-row {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .toggle-container {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+        .toggle-label {
+            font-size: 0.7rem;
+            color: var(--grey);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-right: 8px;
+        }
+        .toggle-btn {
+            padding: 8px 16px;
+            border: 2px solid var(--cream);
+            border-radius: 6px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            background: var(--white);
+            color: var(--grey);
+        }
+        .toggle-btn:hover {
+            border-color: var(--maroon-bright);
+            color: var(--maroon);
+        }
+        .toggle-btn.active {
+            background: var(--maroon);
+            color: var(--white);
+            border-color: var(--maroon);
+        }
+        .toggle-btn.watts-active {
+            background: var(--gold);
+            color: var(--ink);
+            border-color: var(--gold);
+        }
+        .chart-container {
+            position: relative;
+            height: 400px;
+            margin-bottom: 2.5vh;
+            background: var(--cream);
+            border-radius: 8px;
+            padding: 15px;
+        }
+        .galway-summary {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 15px;
+        }
+        .galway-crew {
+            background: linear-gradient(135deg, rgba(139, 0, 0, 0.08), rgba(139, 0, 0, 0.03));
+            border: 1px solid rgba(139, 0, 0, 0.2);
+            border-radius: 10px;
+            padding: 18px;
+        }
+        .galway-crew h4 {
+            color: var(--galway-red);
+            font-size: 1rem;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 700;
+        }
+        .galway-crew h4::before {
+            content: '🚣';
+            font-size: 1.1rem;
+        }
+        .crew-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            font-size: 0.85rem;
+        }
+        .crew-stat {
+            text-align: center;
+        }
+        .crew-stat-label {
+            color: var(--grey);
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .crew-stat-value {
+            font-weight: 700;
+            color: var(--ink);
+            margin-top: 2px;
+        }
+
+        .position-change {
+            font-weight: 700;
+            padding: 3px 8px;
+            border-radius: 4px;
+            display: inline-block;
+            font-size: 0.85rem;
+        }
+        .position-change.positive {
+            background: rgba(16, 185, 129, 0.15);
+            color: #059669;
+        }
+        .position-change.negative {
+            background: rgba(239, 68, 68, 0.15);
+            color: #dc2626;
+        }
+        .position-change.neutral {
+            background: var(--cream);
+            color: var(--grey);
+        }
+        footer {
+            text-align: center;
+            margin-top: 5vh;
+            padding-top: 3vh;
+            border-top: 1px solid var(--cream);
+            color: var(--grey);
+            font-size: 0.85rem;
+        }
+        footer p {
+            margin-bottom: 0.5vh;
+        }
+        .callout {
+            background: var(--maroon);
+            color: var(--white);
+            padding: 2vh 2vw;
+            border-radius: 8px;
+            font-weight: 600;
+            margin-top: 3vh;
+            text-align: center;
+        }
+        .callout .gold {
+            color: var(--gold);
+        }
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(70, 12, 133, 0.08), rgba(70, 12, 133, 0.03));
+            border: 1px solid rgba(70, 12, 133, 0.15);
+            border-radius: 8px;
+            padding: 14px 18px;
+            margin-top: 15px;
+        }
+        .highlight-box h4 {
+            color: var(--maroon);
+            font-size: 0.95rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        .highlight-box p {
+            color: var(--grey);
+            font-size: 0.85rem;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="kicker">Galway Rowing Club</div>
+            <h1>1k Classis Debrief</h1>
+            <p class="subtitle">Rowing Ireland 1K Classic 2026 — Lough Rinn, Sep 19–20</p>
+        </header>
+
+        <div class="legend"></div>
+
+        <!-- Saturday Section -->
+        <div class="day-section">
+            <div class="day-header">
+                <h2>Saturday — September 19</h2>
+            </div>
+            <div class="events-grid" id="saturday-events"></div>
+        </div>
+
+        <!-- Sunday Section -->
+        <div class="day-section">
+            <div class="day-header">
+                <h2>Sunday — September 20</h2>
+                <p class="day-subtitle">Sweep events had moderate 23–25s heat variation</p>
+            </div>
+            <div class="events-grid" id="sunday-events"></div>
+        </div>
+
+
+
+        <footer>
+            <p>CI calculated from pooled within-heat standard deviation</p>
+            <p>Adjusted Time = Raw − (Heat Mean − Overall Mean)</p>
+        </footer>
+    </div>
+
+    <script>
+        // Event data - sculling events have toggle, sweep events are raw only
+        const eventsData = {
+            // SATURDAY - sculling gets toggle
+            "M J15 8x+": {
+                day: "Saturday",
+                races: "145-146",
+                totalCrews: 10,
+                heats: 2,
+                heatRange: 9.6,
+                hasToggle: false, // Sweep - no toggle
+                pooledSD: 10.2,
+                crews: [
+                    { name: "Enniskillen A", heat: "Final 1", raw: 192.9, adjusted: 201.2 },
+                    { name: "Castleconnel", heat: "Final 1", raw: 197.5, adjusted: 205.8 },
+                    { name: "Methodist", heat: "Final 2", raw: 200.0, adjusted: 191.7 },
+                    { name: "St Josephs", heat: "Final 1", raw: 201.9, adjusted: 210.2 },
+                    { name: "Col Iognaid", heat: "Final 1", raw: 210.9, adjusted: 219.2 },
+                    { name: "St. Michaels", heat: "Final 2", raw: 213.5, adjusted: 205.2 },
+                    { name: "Pres Cork", heat: "Final 2", raw: 215.2, adjusted: 206.9 },
+                    { name: "Enniskillen B", heat: "Final 1", raw: 219.6, adjusted: 227.9 },
+                    { name: "Galway", heat: "Final 2", raw: 220.1, adjusted: 211.8, isGalway: true, heatN: 5 },
+                    { name: "Athlone", heat: "Final 2", raw: 222.1, adjusted: 213.8 }
+                ],
+                galwaySummary: [
+                    { name: "Galway", heat: "Final 2", rawTime: "3:40.1", rawRank: 9, adjRank: 7, change: 2, ciWidth: 20.0 }
+                ],
+                note: "Only 2 finals — limited variation. Galway was in the slower heat."
+            },
+            "M J15 1x": {
+                day: "Saturday",
+                races: "116-128",
+                totalCrews: 51,
+                heats: 13,
+                heatRange: 60.5,
+                hasToggle: true, // Sculling - has toggle
+                pooledSD: 14.8,
+                crews: [
+                    { name: "Roche, L", heat: "Final 13", raw: 192.1, adjusted: 231.9 },
+                    { name: "O Brien, T", heat: "Final 5", raw: 197.7, adjusted: 231.3 },
+                    { name: "Larkin, A", heat: "Final 5", raw: 203.3, adjusted: 236.9 },
+                    { name: "Lovell, D", heat: "Final 13", raw: 213.7, adjusted: 253.5 },
+                    { name: "May, D", heat: "Final 5", raw: 213.9, adjusted: 247.5 },
+                    { name: "O'Donaile, R", heat: "Final 13", raw: 215.4, adjusted: 255.2 },
+                    { name: "Hall, M", heat: "Final 13", raw: 219.9, adjusted: 259.7, isGalway: true, heatN: 4 },
+                    { name: "O'Breachain, C", heat: "Final 5", raw: 223.6, adjusted: 257.2 },
+                    { name: "Wall, E", heat: "Final 8", raw: 224.6, adjusted: 214.8 },
+                    { name: "Donnellan, P", heat: "Final 5", raw: 227.3, adjusted: 260.9 },
+                    { name: "Allen, J", heat: "Final 7", raw: 228.4, adjusted: 225.0 },
+                    { name: "Ferguson, O", heat: "Final 1", raw: 231.1, adjusted: 229.1 },
+                    { name: "Tarpey, J", heat: "Final 5", raw: 233.2, adjusted: 266.8 },
+                    { name: "McGillcuddy, M", heat: "Final 7", raw: 234.4, adjusted: 231.0 },
+                    { name: "Kenneally, R", heat: "Final 11", raw: 238.8, adjusted: 234.9 },
+                    { name: "Markham, E", heat: "Final 6", raw: 242.6, adjusted: 237.4 },
+                    { name: "O'Donovan, B", heat: "Final 11", raw: 244.2, adjusted: 240.3 },
+                    { name: "Carey, O", heat: "Final 2", raw: 245.3, adjusted: 232.9 },
+                    { name: "Woods, J", heat: "Final 2", raw: 246.7, adjusted: 234.3 },
+                    { name: "Tracy, F", heat: "Final 6", raw: 246.7, adjusted: 241.5, isGalway: true, heatN: 5 },
+                    { name: "McGowan, D", heat: "Final 1", raw: 249.2, adjusted: 247.2, isGalway: true, heatN: 5 },
+                    { name: "O'Shea, S", heat: "Final 12", raw: 251.7, adjusted: 234.5 },
+                    { name: "Krzempiec, A", heat: "Final 3", raw: 253.1, adjusted: 232.4 },
+                    { name: "Visser, I", heat: "Final 2", raw: 253.5, adjusted: 241.1 },
+                    { name: "Healy, A", heat: "Final 1", raw: 254.3, adjusted: 252.3 },
+                    { name: "O'Riordan, C", heat: "Final 1", raw: 255.2, adjusted: 253.2 },
+                    { name: "Bell, F", heat: "Final 11", raw: 255.5, adjusted: 251.6 },
+                    { name: "Finn, C", heat: "Final 8", raw: 255.6, adjusted: 245.8 },
+                    { name: "Elliott, G", heat: "Final 7", raw: 256.0, adjusted: 252.6 },
+                    { name: "Mullins, L", heat: "Final 6", raw: 257.9, adjusted: 252.7 },
+                    { name: "O'Súilleabháin, E", heat: "Final 11", raw: 258.0, adjusted: 254.1 },
+                    { name: "Shannon, G", heat: "Final 6", raw: 259.2, adjusted: 254.0 },
+                    { name: "Lappin, H", heat: "Final 8", raw: 261.1, adjusted: 251.3 },
+                    { name: "Harrison, J", heat: "Final 7", raw: 261.6, adjusted: 258.2 },
+                    { name: "Kelleher, C", heat: "Final 12", raw: 261.7, adjusted: 244.5 },
+                    { name: "O Grady, B", heat: "Final 2", raw: 265.2, adjusted: 252.8 },
+                    { name: "Lynn, I", heat: "Final 3", raw: 265.2, adjusted: 244.5 },
+                    { name: "Foley, B", heat: "Final 7", raw: 265.6, adjusted: 262.2 },
+                    { name: "Dolan, F", heat: "Final 8", raw: 268.5, adjusted: 258.7 },
+                    { name: "Collins, O", heat: "Final 6", raw: 269.9, adjusted: 264.7 },
+                    { name: "Mitchell, C", heat: "Final 8", raw: 269.9, adjusted: 260.1 },
+                    { name: "O'Conaire, K", heat: "Final 1", raw: 270.9, adjusted: 268.9 },
+                    { name: "O'Farrell, D", heat: "Final 11", raw: 273.4, adjusted: 269.5 },
+                    { name: "Patterson, C", heat: "Final 12", raw: 274.9, adjusted: 257.7 },
+                    { name: "Askin, S", heat: "Final 7", raw: 275.1, adjusted: 271.7 },
+                    { name: "Cuthbertson, J", heat: "Final 2", raw: 277.3, adjusted: 264.9 },
+                    { name: "Haugh, C", heat: "Final 8", raw: 279.7, adjusted: 269.9 },
+                    { name: "Warner, F", heat: "Final 3", raw: 280.8, adjusted: 260.1 },
+                    { name: "O'Brien, A", heat: "Final 12", raw: 281.0, adjusted: 263.8 },
+                    { name: "Cleary, J", heat: "Final 3", raw: 283.9, adjusted: 263.2 },
+                    { name: "Garcia, J", heat: "Final 2", raw: 287.2, adjusted: 274.8 }
+                ],
+                galwaySummary: [
+                    { name: "Hall, M", heat: "Final 13 (Fastest!)", rawTime: "3:39.9", rawRank: 7, adjRank: 37, change: -30, ciWidth: 29.0 },
+                    { name: "Tracy, F", heat: "Final 6", rawTime: "4:06.7", rawRank: 20, adjRank: 16, change: 4, ciWidth: 29.0 },
+                    { name: "McGowan, D", heat: "Final 1", rawTime: "4:09.2", rawRank: 21, adjRank: 20, change: 1, ciWidth: 29.0 }
+                ],
+                note: "Hall's raw 7th is misleading — Final 13 was 40s faster than average. Tracy & McGowan improve after adjustment."
+            },
+            "M J14 1x": {
+                day: "Saturday",
+                races: "135-144",
+                totalCrews: 47,
+                heats: 9,
+                heatRange: 60.8,
+                hasToggle: true, // Sculling - has toggle
+                pooledSD: 21.5,
+                crews: [
+                    { name: "Collins, C", heat: "Final 7", raw: 239.4, adjusted: 269.2 },
+                    { name: "Fox, C", heat: "Final 2", raw: 253.5, adjusted: 257.0 },
+                    { name: "Kerr, C", heat: "Final 7", raw: 254.1, adjusted: 283.9 },
+                    { name: "Mahon, C", heat: "Final 7", raw: 258.4, adjusted: 288.2 },
+                    { name: "Mullally, J", heat: "Final 9", raw: 258.8, adjusted: 270.9 },
+                    { name: "Brady, H", heat: "Final 1", raw: 259.6, adjusted: 269.6 },
+                    { name: "Hennessy, C", heat: "Final 1", raw: 262.1, adjusted: 272.1 },
+                    { name: "O Donovan, M", heat: "Final 1", raw: 263.0, adjusted: 273.0 },
+                    { name: "Lowry, F", heat: "Final 3", raw: 263.5, adjusted: 266.3 },
+                    { name: "Lupton, L", heat: "Final 7", raw: 264.2, adjusted: 294.0 },
+                    { name: "Huang, A", heat: "Final 3", raw: 264.9, adjusted: 267.7 },
+                    { name: "Morgan Gouws, M", heat: "Final 3", raw: 269.1, adjusted: 271.9 },
+                    { name: "Kelly", heat: "Final 2", raw: 269.8, adjusted: 273.3 },
+                    { name: "Dillon, C", heat: "Final 10", raw: 270.0, adjusted: 254.6 },
+                    { name: "Buckley, J", heat: "Final 2", raw: 270.1, adjusted: 273.6 },
+                    { name: "O'Mahony, A", heat: "Final 9", raw: 270.1, adjusted: 282.2 },
+                    { name: "Gibson, J", heat: "Final 2", raw: 271.4, adjusted: 274.9 },
+                    { name: "Laffey, F", heat: "Final 7", raw: 273.3, adjusted: 303.1 },
+                    { name: "Lyons, J", heat: "Final 6", raw: 274.9, adjusted: 277.3 },
+                    { name: "Nolan, F", heat: "Final 9", raw: 277.1, adjusted: 289.2 },
+                    { name: "Hogan, A", heat: "Final 5", raw: 278.8, adjusted: 263.6 },
+                    { name: "Carbery, S", heat: "Final 4", raw: 296.3, adjusted: 265.3 },
+                    { name: "Cummins, J", heat: "Final 4", raw: 305.7, adjusted: 274.7, isGalway: true, heatN: 5 },
+                    { name: "McCafferty, O", heat: "Final 4", raw: 309.7, adjusted: 278.7 },
+                    { name: "McGee, J", heat: "Final 5", raw: 310.1, adjusted: 294.9 }
+                ],
+                galwaySummary: [
+                    { name: "Cummins, J", heat: "Final 4 (Slowest!)", rawTime: "5:05.7", rawRank: 36, adjRank: 16, change: 20, ciWidth: 42.1 }
+                ],
+                note: "Cummins raced in the slowest heat by 31s. Raw 36th → Adjusted 16th. He was 2nd in his heat!"
+            },
+            // SUNDAY - sweep events, no toggle
+            "M J15 4x+": {
+                day: "Sunday",
+                races: "205-210",
+                totalCrews: 25,
+                heats: 5,
+                heatRange: 23.2,
+                hasToggle: false,
+                pooledSD: 15.3,
+                crews: [
+                    { name: "Methodist A", heat: "Final 4", raw: 202.1, adjusted: 212.7 },
+                    { name: "St. Michaels A", heat: "Final 1", raw: 202.7, adjusted: 207.0 },
+                    { name: "Enniskillen A", heat: "Final 1", raw: 205.4, adjusted: 209.7 },
+                    { name: "Skibbereen", heat: "Final 4", raw: 205.7, adjusted: 216.3 },
+                    { name: "Castleconnel A", heat: "Final 2", raw: 206.4, adjusted: 208.0 },
+                    { name: "St Josephs A", heat: "Final 3", raw: 209.6, adjusted: 207.4 },
+                    { name: "Shandon", heat: "Final 3", raw: 211.0, adjusted: 208.8 },
+                    { name: "Pres Cork B", heat: "Final 1", raw: 211.5, adjusted: 215.8 },
+                    { name: "Bann A", heat: "Final 2", raw: 213.7, adjusted: 215.3 },
+                    { name: "Methodist B", heat: "Final 5", raw: 213.8, adjusted: 201.2 },
+                    { name: "Cork A", heat: "Final 1", raw: 215.0, adjusted: 219.3 },
+                    { name: "Newry", heat: "Final 2", raw: 215.7, adjusted: 217.3 },
+                    { name: "Col Iognaid A", heat: "Final 3", raw: 217.1, adjusted: 214.9 },
+                    { name: "Castleconnel B", heat: "Final 4", raw: 217.6, adjusted: 228.2 },
+                    { name: "St. Michaels B", heat: "Final 2", raw: 217.8, adjusted: 219.4 },
+                    { name: "Galway A", heat: "Final 4", raw: 220.9, adjusted: 231.5, isGalway: true, heatN: 5 },
+                    { name: "Enniskillen C", heat: "Final 5", raw: 225.5, adjusted: 212.9 },
+                    { name: "Athlone A", heat: "Final 2", raw: 228.8, adjusted: 230.4 },
+                    { name: "Methodist C", heat: "Final 5", raw: 236.4, adjusted: 223.8 },
+                    { name: "St Josephs B", heat: "Final 3", raw: 239.2, adjusted: 237.0 },
+                    { name: "Athlone B", heat: "Final 2", raw: 241.0, adjusted: 242.6 },
+                    { name: "Col Iognaid B", heat: "Final 3", raw: 245.2, adjusted: 243.0 },
+                    { name: "Enniskillen D", heat: "Final 5", raw: 246.7, adjusted: 234.1 },
+                    { name: "Galway B", heat: "Final 5", raw: 251.4, adjusted: 238.8, isGalway: true, heatN: 5 },
+                    { name: "St. Michaels C", heat: "Final 1", raw: 254.7, adjusted: 259.0 }
+                ],
+                galwaySummary: [
+                    { name: "Galway A", heat: "Final 4 (Fast)", rawTime: "3:40.9", rawRank: 16, adjRank: 19, change: -3, ciWidth: 30.0 },
+                    { name: "Galway B", heat: "Final 5 (Slow)", rawTime: "4:11.4", rawRank: 24, adjRank: 22, change: 2, ciWidth: 30.0 }
+                ]
+            },
+            "M J15 2x": {
+                day: "Sunday",
+                races: "233-241",
+                totalCrews: 50,
+                heats: 9,
+                heatRange: 25.3,
+                hasToggle: false,
+                pooledSD: 18.2,
+                crews: [
+                    { name: "Skibbereen A", heat: "Final 3", raw: 211.6, adjusted: 219.0 },
+                    { name: "Shandon A", heat: "Final 4", raw: 211.6, adjusted: 218.8 },
+                    { name: "St. Michaels B", heat: "Final 2", raw: 218.7, adjusted: 225.9 },
+                    { name: "Commercial A", heat: "Final 4", raw: 220.1, adjusted: 227.3 },
+                    { name: "Cork A", heat: "Final 5", raw: 220.1, adjusted: 214.4 },
+                    { name: "St. Michaels C", heat: "Final 2", raw: 220.8, adjusted: 228.0 },
+                    { name: "Newry", heat: "Final 9", raw: 221.9, adjusted: 233.5 },
+                    { name: "Enniskillen A", heat: "Final 6", raw: 222.7, adjusted: 217.9 },
+                    { name: "Col Iognaid A", heat: "Final 1", raw: 223.4, adjusted: 214.2 },
+                    { name: "Galway A", heat: "Final 4", raw: 223.6, adjusted: 230.8, isGalway: true, heatN: 6 },
+                    { name: "Castleconnel D", heat: "Final 9", raw: 224.0, adjusted: 235.6 },
+                    { name: "St. Michaels A", heat: "Final 4", raw: 224.1, adjusted: 231.3 },
+                    { name: "Enniskillen C", heat: "Final 3", raw: 225.6, adjusted: 233.0 },
+                    { name: "Carrick A", heat: "Final 9", raw: 226.3, adjusted: 237.9 },
+                    { name: "Castleconnel A", heat: "Final 2", raw: 227.5, adjusted: 234.7 },
+                    { name: "Cork B", heat: "Final 8", raw: 228.6, adjusted: 226.3 },
+                    { name: "Enniskillen B", heat: "Final 9", raw: 229.2, adjusted: 240.8 },
+                    { name: "Castleconnel B", heat: "Final 8", raw: 229.3, adjusted: 227.0 },
+                    { name: "Methodist", heat: "Final 3", raw: 229.8, adjusted: 237.2 },
+                    { name: "Shandon B", heat: "Final 2", raw: 231.8, adjusted: 239.0 },
+                    { name: "Bann B", heat: "Final 6", raw: 232.5, adjusted: 227.7 },
+                    { name: "Bann A", heat: "Final 7", raw: 234.9, adjusted: 221.2 },
+                    { name: "Skibbereen B", heat: "Final 5", raw: 235.3, adjusted: 229.6 },
+                    { name: "Sligo", heat: "Final 7", raw: 237.6, adjusted: 223.9 },
+                    { name: "Pres Cork A", heat: "Final 1", raw: 239.2, adjusted: 230.0 },
+                    { name: "Athlone A", heat: "Final 3", raw: 239.2, adjusted: 246.6 },
+                    { name: "CRCC", heat: "Final 8", raw: 239.8, adjusted: 237.5 },
+                    { name: "Lee", heat: "Final 6", raw: 240.1, adjusted: 235.3 },
+                    { name: "Enniskillen E", heat: "Final 5", raw: 240.9, adjusted: 235.2 },
+                    { name: "Pres Cork B", heat: "Final 4", raw: 241.5, adjusted: 248.7 },
+                    { name: "Athlone C", heat: "Final 3", raw: 242.5, adjusted: 249.9 },
+                    { name: "Castleconnel C", heat: "Final 6", raw: 242.9, adjusted: 238.1 },
+                    { name: "Carrick B", heat: "Final 8", raw: 243.9, adjusted: 241.6 },
+                    { name: "Athlone B", heat: "Final 5", raw: 244.0, adjusted: 238.3 },
+                    { name: "St. Michaels E", heat: "Final 2", raw: 244.4, adjusted: 251.6 },
+                    { name: "Galway B", heat: "Final 9", raw: 245.1, adjusted: 256.7, isGalway: true, heatN: 5 },
+                    { name: "Enniskillen D", heat: "Final 5", raw: 245.7, adjusted: 240.0 },
+                    { name: "St. Michaels D", heat: "Final 1", raw: 248.8, adjusted: 239.6 },
+                    { name: "St Josephs B", heat: "Final 7", raw: 249.5, adjusted: 235.8 },
+                    { name: "Waterford", heat: "Final 3", raw: 252.0, adjusted: 259.4 },
+                    { name: "Col Iognaid B", heat: "Final 7", raw: 258.7, adjusted: 245.0 },
+                    { name: "St Josephs A", heat: "Final 2", raw: 259.0, adjusted: 266.2 },
+                    { name: "Col Iognaid C", heat: "Final 6", raw: 260.1, adjusted: 255.3 },
+                    { name: "Bann C", heat: "Final 1", raw: 262.9, adjusted: 253.7 },
+                    { name: "Athlone D", heat: "Final 8", raw: 274.0, adjusted: 271.7 },
+                    { name: "St. Michaels F", heat: "Final 6", raw: 275.5, adjusted: 270.7 },
+                    { name: "Commercial B", heat: "Final 1", raw: 275.8, adjusted: 266.6 },
+                    { name: "St Josephs C", heat: "Final 4", raw: 281.0, adjusted: 288.2 },
+                    { name: "Col Iognaid D", heat: "Final 7", raw: 292.2, adjusted: 278.5 },
+                    { name: "Castleconnel E", heat: "Final 5", raw: 293.7, adjusted: 288.0 }
+                ],
+                galwaySummary: [
+                    { name: "Galway A", heat: "Final 4", rawTime: "3:43.6", rawRank: 10, adjRank: 16, change: -6, ciWidth: 35.7 },
+                    { name: "Galway B", heat: "Final 9", rawTime: "4:05.1", rawRank: 36, adjRank: 42, change: -6, ciWidth: 35.7 }
+                ]
+            },
+            "M J14 2x": {
+                day: "Sunday",
+                races: "258-264",
+                totalCrews: 40,
+                heats: 7,
+                heatRange: 24.0,
+                hasToggle: false,
+                pooledSD: 17.8,
+                crews: [
+                    { name: "Fermoy", heat: "Final 7", raw: 217.7, adjusted: 220.2 },
+                    { name: "Waterford A", heat: "Final 4", raw: 218.6, adjusted: 226.5 },
+                    { name: "Offaly", heat: "Final 6", raw: 219.3, adjusted: 220.6 },
+                    { name: "Athlone B", heat: "Final 6", raw: 220.0, adjusted: 221.3 },
+                    { name: "Bantry B", heat: "Final 1", raw: 222.2, adjusted: 219.8 },
+                    { name: "Galway", heat: "Final 5", raw: 227.3, adjusted: 238.9, isGalway: true, heatN: 6 },
+                    { name: "Cork B", heat: "Final 5", raw: 228.6, adjusted: 240.2 },
+                    { name: "Lee A", heat: "Final 6", raw: 229.2, adjusted: 230.5 },
+                    { name: "Carrick A", heat: "Final 2", raw: 232.1, adjusted: 219.7 },
+                    { name: "St. Michaels A", heat: "Final 5", raw: 233.9, adjusted: 245.5 },
+                    { name: "Enniskillen A", heat: "Final 5", raw: 235.7, adjusted: 247.3 },
+                    { name: "Waterford B", heat: "Final 4", raw: 236.5, adjusted: 244.4 },
+                    { name: "Shandon", heat: "Final 3", raw: 236.9, adjusted: 226.2 },
+                    { name: "Col Iognaid A", heat: "Final 7", raw: 237.7, adjusted: 240.2 },
+                    { name: "Commercial B", heat: "Final 7", raw: 239.8, adjusted: 242.3 },
+                    { name: "Castleconnel", heat: "Final 4", raw: 240.1, adjusted: 248.0 },
+                    { name: "Commercial A", heat: "Final 2", raw: 241.6, adjusted: 229.2 },
+                    { name: "Pres Cork B", heat: "Final 5", raw: 242.7, adjusted: 254.3 },
+                    { name: "Carrick B", heat: "Final 3", raw: 243.5, adjusted: 232.8 },
+                    { name: "St Josephs C", heat: "Final 4", raw: 244.9, adjusted: 252.8 },
+                    { name: "Newry", heat: "Final 6", raw: 245.4, adjusted: 246.7 },
+                    { name: "Bantry A", heat: "Final 4", raw: 248.4, adjusted: 256.3 },
+                    { name: "St Josephs A", heat: "Final 1", raw: 250.9, adjusted: 248.5 },
+                    { name: "Lee B", heat: "Final 7", raw: 251.1, adjusted: 253.6 },
+                    { name: "Cork A", heat: "Final 1", raw: 258.3, adjusted: 255.9 },
+                    { name: "Skibbereen B", heat: "Final 7", raw: 258.8, adjusted: 261.3 },
+                    { name: "Col Iognaid B", heat: "Final 5", raw: 258.9, adjusted: 270.5 },
+                    { name: "St. Michaels B", heat: "Final 4", raw: 260.5, adjusted: 268.4 },
+                    { name: "Enniskillen B", heat: "Final 2", raw: 262.1, adjusted: 249.7 },
+                    { name: "Bann", heat: "Final 1", raw: 263.0, adjusted: 260.6 },
+                    { name: "Northwest", heat: "Final 2", raw: 264.3, adjusted: 251.9 },
+                    { name: "Skibbereen A", heat: "Final 1", raw: 264.8, adjusted: 262.4 },
+                    { name: "Athlone A", heat: "Final 3", raw: 268.9, adjusted: 258.2 },
+                    { name: "Pres Cork A", heat: "Final 3", raw: 272.9, adjusted: 262.2 },
+                    { name: "Cork C", heat: "Final 7", raw: 276.4, adjusted: 278.9 },
+                    { name: "St Josephs D", heat: "Final 3", raw: 278.3, adjusted: 267.6 },
+                    { name: "St Josephs F", heat: "Final 2", raw: 279.3, adjusted: 266.9 },
+                    { name: "Carrick C", heat: "Final 6", raw: 279.4, adjusted: 280.7 },
+                    { name: "St Josephs E", heat: "Final 2", raw: 291.6, adjusted: 279.2 },
+                    { name: "CRCC", heat: "Final 6", raw: 295.8, adjusted: 297.1 }
+                ],
+                galwaySummary: [
+                    { name: "Galway", heat: "Final 5 (Fastest)", rawTime: "3:47.3", rawRank: 6, adjRank: 11, change: -5, ciWidth: 34.9 }
+                ]
+            }
+        };
+
+        // Track mode per event (only for toggle events)
+const CLUB_COLORS = {
+    "Athlone": {
+        "primary": "#228B22",
+        "secondary": "#DC143C"
+    },
+    "Bann": {
+        "primary": "#DC143C",
+        "secondary": "#FFFFFF"
+    },
+    "Bantry": {
+        "primary": "#FF6B6B",
+        "secondary": "#FF6B6B"
+    },
+    "CRCC": {
+        "primary": "#008080",
+        "secondary": "#000000"
+    },
+    "Carrick": {
+        "primary": "#4ECDC4",
+        "secondary": "#4ECDC4"
+    },
+    "Castleconnel": {
+        "primary": "#DC143C",
+        "secondary": "#808080"
+    },
+    "Col Iognaid": {
+        "primary": "#800000",
+        "secondary": "#FFFFFF"
+    },
+    "Commercial": {
+        "primary": "#317873",
+        "secondary": "#FFFFFF"
+    },
+    "Cork": {
+        "primary": "#3F2212",
+        "secondary": "#FFFFFF"
+    },
+    "Enniskillen": {
+        "primary": "#000035",
+        "secondary": "#DC143C"
+    },
+    "Fermoy": {
+        "primary": "#228B22",
+        "secondary": "#FFFFFF"
+    },
+    "Galway": {
+        "primary": "#800080",
+        "secondary": "#FFBF00"
+    },
+    "Garda": {
+        "primary": "#007FFF",
+        "secondary": "#FFFFFF"
+    },
+    "Lee": {
+        "primary": "#DC143C",
+        "secondary": "#000000"
+    },
+    "Lee Valley": {
+        "primary": "#DC143C",
+        "secondary": "#000000"
+    },
+    "Methodist": {
+        "primary": "#000080",
+        "secondary": "#FFFFFF"
+    },
+    "Newry": {
+        "primary": "#DC143C",
+        "secondary": "#000000"
+    },
+    "Northwest": {
+        "primary": "#0066CC",
+        "secondary": "#FFFFFF"
+    },
+    "Offaly": {
+        "primary": "#808080",
+        "secondary": "#DC143C"
+    },
+    "Pres Cork": {
+        "primary": "#000000",
+        "secondary": "#7F00FF"
+    },
+    "Shandon": {
+        "primary": "#ADD8E6",
+        "secondary": "#ADD8E6"
+    },
+    "Skibbereen": {
+        "primary": "#DC143C",
+        "secondary": "#FFFFFF"
+    },
+    "Sligo": {
+        "primary": "#000000",
+        "secondary": "#DC143C"
+    },
+    "St Josephs": {
+        "primary": "#0066CC",
+        "secondary": "#0066CC"
+    },
+    "St. Michaels": {
+        "primary": "#000080",
+        "secondary": "#CFB53B"
+    },
+    "Waterford": {
+        "primary": "#000080",
+        "secondary": "#FFFFFF"
+    }
+};
+
+        const ROWER_CLUBS = {
+    "Allen, J": "Enniskillen",
+    "Askin, S": "St. Michaels",
+    "Bell, F": "Enniskillen",
+    "Brady, H": "Waterford",
+    "Buckley, J": "Castleconnel",
+    "Carbery, S": "Cork",
+    "Carey, O": "Bann",
+    "Cleary, J": "Athlone",
+    "Collins, C": "Bantry",
+    "Collins, O": "Enniskillen",
+    "Cummins, J": "Galway",
+    "Cuthbertson, J": "Enniskillen",
+    "Dillon, C": "Fermoy",
+    "Dolan, F": "Athlone",
+    "Donnellan, P": "Col Iognaid",
+    "Elliott, G": "Enniskillen",
+    "Ferguson, O": "Skibbereen",
+    "Finn, C": "St. Michaels",
+    "Foley, B": "Sligo",
+    "Fox, C": "Athlone",
+    "Garcia, J": "Methodist",
+    "Gibson, J": "Cork",
+    "Goggin, L": "Cork",
+    "Hall, M": "Galway",
+    "Harrison, J": "St. Michaels",
+    "Haugh, C": "St. Michaels",
+    "Healy, A": "St. Michaels",
+    "Hennessy, C": "Bantry",
+    "Hogan, A": "Lee",
+    "Huang, A": "KHBC",
+    "Kelleher, C": "Cork",
+    "Kelly": "Carrick",
+    "Kenneally, R": "Shandon",
+    "Kerr, C": "Shandon",
+    "Krzempiec, A": "Northwest",
+    "Laffey, F": "Athlone",
+    "Lappin, H": "Col Iognaid",
+    "Larkin, A": "St. Michaels",
+    "Lovell, D": "St. Michaels",
+    "Lowry, F": "Offaly",
+    "Lupton, L": "Skibbereen",
+    "Lynn, I": "Bann",
+    "Lyons, J": "Lee",
+    "Mahon, C": "Fermoy",
+    "Markham, E": "St. Michaels",
+    "May, D": "Athlone",
+    "McCafferty, O": "Col Iognaid",
+    "McGillcuddy, M": "Lee Valley",
+    "McGowan, D": "Galway",
+    "Mitchell, C": "Athlone",
+    "Morgan Gouws, M": "St. Michaels",
+    "Mullally, J": "Athlone",
+    "Mullins, L": "Waterford",
+    "Nolan, F": "Commercial",
+    "O Brien, T": "Newry",
+    "O Donovan, M": "Skibbereen",
+    "O Grady, B": "Offaly",
+    "O'Breachain, C": "CRCC",
+    "O'Brien, A": "Shandon",
+    "O'Conaire, K": "Col Iognaid",
+    "O'Donaile, R": "Carrick",
+    "O'Donovan, B": "Shandon",
+    "O'Farrell, D": "St Josephs",
+    "O'Mahony, A": "Bantry",
+    "O'Riordan, C": "Cork",
+    "O'Shea, S": "Cork",
+    "O'Súilleabháin, E": "Shandon",
+    "Patterson, C": "Bann",
+    "Roche, L": "Garda",
+    "Shannon, G": "St. Michaels",
+    "Tarpey, J": "St. Michaels",
+    "Tracy, F": "Galway",
+    "Visser, I": "Lee",
+    "Wall, E": "Cork",
+    "Warner, F": "Col Iognaid",
+    "Whelan, C": "Commercial",
+    "Woods, J": "Bann"
+};
+
+        // Per-event set of crew names the user has clicked to highlight
+        const selectedCrews = {};
+
+        // Chart.js plugin: translucent vertical bar behind Galway points (always)
+        // and behind any point the user has clicked (in that club's primary colour)
+        const highlightBarsPlugin = {
+            id: 'highlightBars',
+            beforeDatasetsDraw(chart) {
+                const { ctx, chartArea, scales } = chart;
+                const selected = selectedCrews[chart.$eventName] || new Set();
+                const halfWidth = Math.max(6, Math.min(16, (scales.x.getPixelForValue(1) - scales.x.getPixelForValue(0)) * 0.35));
+                ctx.save();
+                ctx.beginPath();
+                ctx.rect(chartArea.left, chartArea.top, chartArea.right - chartArea.left, chartArea.bottom - chartArea.top);
+                ctx.clip();
+                chart.data.datasets.forEach(ds => {
+                    const isGalway = ds.label === 'Galway';
+                    ds.data.forEach(pt => {
+                        const clicked = selected.has(pt.label);
+                        if (!isGalway && !clicked) return;
+                        const col = getClubColor(pt.club).primary;
+                        const x = scales.x.getPixelForValue(pt.x);
+                        ctx.fillStyle = hexToRgba(col, isGalway ? 0.16 : 0.26);
+                        ctx.fillRect(x - halfWidth, chartArea.top, halfWidth * 2, chartArea.bottom - chartArea.top);
+                    });
+                });
+                ctx.restore();
+            }
+        };
+
+        const UNKNOWN_CLUB = { primary: '#9e9e9e', secondary: '#616161' };
+        const unmappedClubs = new Set();
+
+        // Resolve a crew/rower name to its club name
+        function getClubName(name) {
+            if (ROWER_CLUBS[name]) return ROWER_CLUBS[name];
+            if (CLUB_COLORS[name]) return name;
+            const base = name.replace(/\s+[A-Z]$/, '');   // "Enniskillen A" -> "Enniskillen"
+            if (CLUB_COLORS[base]) return base;
+            return name;
+        }
+
+        function getClubColor(clubName) {
+            const c = CLUB_COLORS[clubName];
+            if (!c) { unmappedClubs.add(clubName); return UNKNOWN_CLUB; }
+            return c;
+        }
+
+        function hexToRgba(hex, alpha) {
+            const h = hex.replace('#', '');
+            const n = parseInt(h.length === 3 ? h.split('').map(x => x + x).join('') : h, 16);
+            return `rgba(${(n >> 16) & 255}, ${(n >> 8) & 255}, ${n & 255}, ${alpha})`;
+        }
+
+        // Rebuild the legend from the clubs present across all events
+        function buildLegend() {
+            const legend = document.querySelector('.legend');
+            if (!legend) return;
+            const clubs = new Set();
+            Object.values(eventsData).forEach(ev => ev.crews.forEach(c => clubs.add(getClubName(c.name))));
+            const sorted = [...clubs].sort((a, b) => a === 'Galway' ? -1 : b === 'Galway' ? 1 : a.localeCompare(b));
+            legend.innerHTML = sorted.map(club => {
+                const col = getClubColor(club);
+                const cls = club === 'Galway' ? 'legend-color galway' : 'legend-color';
+                return `<div class="legend-item"><div class="${cls}" style="background:${col.primary};border-color:${col.secondary}"></div><span>${club}</span></div>`;
+            }).join('');
+            if (unmappedClubs.size) console.warn('Clubs without colours (grey fallback):', [...unmappedClubs]);
+        }
+
+        const eventModes = {};      // 'raw' or 'adjusted'
+        const wattsMode = {};       // true/false for watts display
+        const charts = {};
+
+        function formatTime(seconds) {
+            const mins = Math.floor(seconds / 60);
+            const secs = (seconds % 60).toFixed(1);
+            return `${mins}:${secs.padStart(4, '0')}`;
+        }
+
+        // Concept 2 formula: watts = 2.80 / pace³
+        // where pace = time(seconds) / distance(meters)
+        // For 1000m race: pace = time / 1000
+        function timeToWatts(timeSeconds, distance = 1000) {
+            const pace = timeSeconds / distance;
+            return 2.80 / Math.pow(pace, 3);
+        }
+
+        function formatWatts(watts) {
+            return Math.round(watts) + 'W';
+        }
+
+        function createChart(eventName, eventData, mode) {
+            const canvasId = `chart-${eventName.replace(/\s+/g, '-')}`;
+            const ctx = document.getElementById(canvasId).getContext('2d');
+
+            const useAdjusted = mode === 'adjusted';
+            const showWatts = wattsMode[eventName] || false;
+            const totalCrews = eventData.totalCrews;
+
+            // Sort crews by time and assign ranks (always by time, not watts)
+            const sortedCrews = [...eventData.crews].sort((a, b) => {
+                const timeA = useAdjusted ? a.adjusted : a.raw;
+                const timeB = useAdjusted ? b.adjusted : b.raw;
+                return timeA - timeB;
+            });
+
+            // Assign current ranks based on sorted order
+            sortedCrews.forEach((c, i) => {
+                c.currentRank = i + 1;
+            });
+
+            // Calculate watts for each crew
+            const getDisplayValue = (c) => {
+                const time = useAdjusted ? c.adjusted : c.raw;
+                return showWatts ? timeToWatts(time) : time;
+            };
+
+            // Prepare data points — one dataset per club, in official club colours
+            const toPoint = (c) => ({
+                x: c.currentRank,
+                y: getDisplayValue(c),
+                label: c.name,
+                club: getClubName(c.name),
+                heat: c.heat,
+                raw: c.raw,
+                adjusted: c.adjusted,
+                rawWatts: timeToWatts(c.raw),
+                adjustedWatts: timeToWatts(c.adjusted),
+                rank: c.currentRank
+            });
+
+            const byClub = {};
+            sortedCrews.forEach(c => {
+                const club = getClubName(c.name);
+                (byClub[club] = byClub[club] || []).push(toPoint(c));
+            });
+
+            const clubDatasets = Object.keys(byClub).sort().map(club => {
+                const col = getClubColor(club);
+                const isGalway = club === 'Galway';
+                return {
+                    label: club,
+                    data: byClub[club],
+                    backgroundColor: hexToRgba(col.primary, isGalway ? 1 : 0.85),
+                    borderColor: col.secondary,
+                    borderWidth: isGalway ? 3 : 2,
+                    pointRadius: isGalway ? 11 : 6,
+                    pointHoverRadius: isGalway ? 14 : 9,
+                    pointStyle: 'circle',
+                    order: isGalway ? 0 : 1
+                };
+            });
+
+            if (charts[eventName]) {
+                charts[eventName].destroy();
+            }
+
+            charts[eventName] = new Chart(ctx, {
+                type: 'scatter',
+                data: {
+                    datasets: clubDatasets
+                },
+                plugins: [highlightBarsPlugin],
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    onClick: (evt, elements, chart) => {
+                        if (!elements.length) return;
+                        const { datasetIndex, index } = elements[0];
+                        const pt = chart.data.datasets[datasetIndex].data[index];
+                        if (pt.club === 'Galway') return;   // always highlighted
+                        const set = selectedCrews[eventName] = selectedCrews[eventName] || new Set();
+                        set.has(pt.label) ? set.delete(pt.label) : set.add(pt.label);
+                        chart.update('none');
+                    },
+                    onHover: (evt, elements) => {
+                        evt.native.target.style.cursor = elements.length ? 'pointer' : 'default';
+                    },
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    const point = context.raw;
+                                    const suffix = point.rank === 1 ? 'st' : point.rank === 2 ? 'nd' : point.rank === 3 ? 'rd' : 'th';
+                                    return [
+                                        `${point.rank}${suffix}: ${point.label}`,
+                                        `Club: ${point.club}`,
+                                        `Raw: ${formatTime(point.raw)} (${formatWatts(point.rawWatts)})`,
+                                        `Adjusted: ${formatTime(point.adjusted)} (${formatWatts(point.adjustedWatts)})`,
+                                        `Heat: ${point.heat}`
+                                    ];
+                                }
+                            },
+                            backgroundColor: 'rgba(29, 29, 36, 0.95)',
+                            titleColor: '#fff',
+                            bodyColor: '#fff',
+                            padding: 12,
+                            cornerRadius: 6,
+                            titleFont: { weight: 'bold' }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            type: 'linear',
+                            min: 0,
+                            max: totalCrews + 1,
+                            title: {
+                                display: true,
+                                text: 'Position',
+                                color: '#5c5c66',
+                                font: { weight: '600', size: 12 }
+                            },
+                            ticks: {
+                                stepSize: Math.max(1, Math.ceil(totalCrews / 10)),
+                                callback: function(value) {
+                                    if (value <= 0 || value > totalCrews) return '';
+                                    const v = Math.round(value);
+                                    const suffix = v === 1 ? 'st' : v === 2 ? 'nd' : v === 3 ? 'rd' : 'th';
+                                    return v + suffix;
+                                },
+                                color: '#5c5c66',
+                                font: { size: 10 }
+                            },
+                            grid: {
+                                color: 'rgba(0, 0, 0, 0.06)'
+                            }
+                        },
+                        y: {
+                            type: 'linear',
+                            // Both time and watts: ascending order (0 at bottom, higher at top)
+                            title: {
+                                display: true,
+                                text: showWatts
+                                    ? (useAdjusted ? 'Heat-Adjusted Power (Watts)' : 'Raw Power (Watts)')
+                                    : (useAdjusted ? 'Heat-Adjusted Time' : 'Raw Time'),
+                                color: '#5c5c66',
+                                font: { weight: '600', size: 12 }
+                            },
+                            ticks: {
+                                callback: function(value) {
+                                    return showWatts ? Math.round(value) + 'W' : formatTime(value);
+                                },
+                                color: '#5c5c66',
+                                font: { size: 10 }
+                            },
+                            grid: {
+                                color: 'rgba(0, 0, 0, 0.06)'
+                            }
+                        }
+                    }
+                }
+            });
+            charts[eventName].$eventName = eventName;
+        }
+
+
+
+        function setEventMode(eventName, mode) {
+            eventModes[eventName] = mode;
+
+            const card = document.querySelector(`[data-event="${eventName}"]`);
+            card.querySelectorAll('.time-toggle .toggle-btn').forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.dataset.mode === mode) {
+                    btn.classList.add('active');
+                }
+            });
+
+            createChart(eventName, eventsData[eventName], mode);
+            updateGalwaySummary(eventName, eventsData[eventName], mode);
+        }
+
+        function toggleWatts(eventName) {
+            wattsMode[eventName] = !wattsMode[eventName];
+
+            const card = document.querySelector(`[data-event="${eventName}"]`);
+            const wattsBtn = card.querySelector('.watts-toggle .toggle-btn');
+
+            if (wattsMode[eventName]) {
+                wattsBtn.classList.add('watts-active');
+                wattsBtn.textContent = 'Show Time';
+            } else {
+                wattsBtn.classList.remove('watts-active');
+                wattsBtn.textContent = 'Show Watts';
+            }
+
+            createChart(eventName, eventsData[eventName], eventModes[eventName] || 'raw');
+            updateGalwaySummary(eventName, eventsData[eventName], eventModes[eventName] || 'raw');
+        }
+
+        function updateGalwaySummary(eventName, eventData, mode) {
+            const card = document.querySelector(`[data-event="${eventName}"]`);
+            const summaryContainer = card.querySelector('.galway-summary');
+            const useAdjusted = mode === 'adjusted';
+            const showWatts = wattsMode[eventName] || false;
+
+            const galwaySummaryHTML = eventData.galwaySummary.map(g => {
+                const displayRank = useAdjusted ? g.adjRank : g.rawRank;
+                const changeClass = g.change > 0 ? 'positive' : (g.change < 0 ? 'negative' : 'neutral');
+                const changeText = g.change > 0 ? `+${g.change}` : g.change.toString();
+
+                // Parse time string to get raw seconds for watts calc
+                const timeParts = g.rawTime.split(':');
+                const rawSeconds = parseInt(timeParts[0]) * 60 + parseFloat(timeParts[1]);
+                const watts = timeToWatts(rawSeconds);
+
+                return `
+                    <div class="galway-crew">
+                        <h4>${g.name}</h4>
+                        <div class="crew-stats">
+                            <div class="crew-stat">
+                                <div class="crew-stat-label">Heat</div>
+                                <div class="crew-stat-value">${g.heat.split(' (')[0]}</div>
+                            </div>
+                            <div class="crew-stat">
+                                <div class="crew-stat-label">${showWatts ? 'Power' : 'Time'}</div>
+                                <div class="crew-stat-value">${showWatts ? formatWatts(watts) : g.rawTime}</div>
+                            </div>
+                            <div class="crew-stat">
+                                <div class="crew-stat-label">${useAdjusted ? 'Adj Rank' : 'Rank'}</div>
+                                <div class="crew-stat-value">${displayRank}/${eventData.totalCrews}</div>
+                            </div>
+
+                            ${eventData.hasToggle ? `
+                            <div class="crew-stat">
+                                <div class="crew-stat-label">Δ Rank</div>
+                                <div class="crew-stat-value">
+                                    <span class="position-change ${changeClass}">${changeText}</span>
+                                </div>
+                            </div>
+                            ` : ''}
+                        </div>
+                    </div>
+                `;
+            }).join('');
+
+            summaryContainer.innerHTML = galwaySummaryHTML;
+        }
+
+        function renderEvents() {
+            let currentDay = null;
+
+            for (const [eventName, eventData] of Object.entries(eventsData)) {
+                if (eventData.day !== currentDay) {
+                    currentDay = eventData.day;
+                }
+
+                const containerId = `${currentDay.toLowerCase()}-events`;
+                const container = document.getElementById(containerId);
+
+                eventModes[eventName] = 'raw';
+                wattsMode[eventName] = false;
+
+                const card = document.createElement('div');
+                card.className = 'event-card';
+                card.dataset.event = eventName;
+
+                // Time adjustment toggle (only for sculling events)
+                const timeToggleHTML = eventData.hasToggle ? `
+                    <div class="toggle-container time-toggle">
+                        <span class="toggle-label">Data:</span>
+                        <button class="toggle-btn active" data-mode="raw" onclick="setEventMode('${eventName}', 'raw')">Raw</button>
+                        <button class="toggle-btn" data-mode="adjusted" onclick="setEventMode('${eventName}', 'adjusted')">Adjusted</button>
+                    </div>
+                ` : '';
+
+                // Watts toggle (for all events)
+                const wattsToggleHTML = `
+                    <div class="toggle-container watts-toggle">
+                        <span class="toggle-label">Display:</span>
+                        <button class="toggle-btn" onclick="toggleWatts('${eventName}')">Show Watts</button>
+                    </div>
+                `;
+
+                const noteHTML = eventData.note ? `
+                    <div class="highlight-box">
+                        <h4>💡 Key Insight</h4>
+                        <p>${eventData.note}</p>
+                    </div>
+                ` : '';
+
+                card.innerHTML = `
+                    <div class="event-header">
+                        <div class="event-title-section">
+                            <h2 class="event-title">${eventName}</h2>
+                            <div class="event-subtitle">Races ${eventData.races}</div>
+                        </div>
+                        <div class="event-stats">
+                            <div class="stat">
+                                <div class="stat-value">${eventData.totalCrews}</div>
+                                <div class="stat-label">Crews</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">${eventData.heats}</div>
+                                <div class="stat-label">Finals</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">${eventData.heatRange.toFixed(1)}s</div>
+                                <div class="stat-label">Heat Δ</div>
+                            </div>
+                        </div>
+                        <div class="toggle-row">
+                            ${timeToggleHTML}
+                            ${wattsToggleHTML}
+                        </div>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="chart-${eventName.replace(/\s+/g, '-')}"></canvas>
+                    </div>
+                    <div class="galway-summary"></div>
+                    ${noteHTML}
+                `;
+
+                container.appendChild(card);
+            }
+
+            buildLegend();
+
+            // Create charts after DOM ready
+            for (const eventName of Object.keys(eventsData)) {
+                createChart(eventName, eventsData[eventName], 'raw');
+                updateGalwaySummary(eventName, eventsData[eventName], 'raw');
+            }
+        }
+
+        renderEvents();
+    </script>
+</body>
+</html>

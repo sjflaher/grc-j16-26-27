@@ -1,0 +1,8 @@
+.DS_Store
+__pycache__/
+*.pyc
+
+# Photos of athletes — not published by default. Remove these lines to include.
+01-season-2026-27/images/*.jpg
+# Source decks (pptx) — HTML versions are published instead.
+*.pptx

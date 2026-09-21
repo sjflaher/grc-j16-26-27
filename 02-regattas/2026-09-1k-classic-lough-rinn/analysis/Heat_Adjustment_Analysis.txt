@@ -1,0 +1,143 @@
+
+================================================================================
+HEAT ADJUSTMENT ANALYSIS - M J15 8x+
+================================================================================
+
+Heat Statistics:
+Heat            Mean         Median       Std Dev    Count   
+------------------------------------------------------------
+Final 1         3:24.6       3:21.9       10.72      5       
+Final 2         3:34.2       3:35.2       8.67       5       
+
+Overall         3:29.4       3:32.2      
+
+--------------------------------------------------------------------------------
+STATISTICAL TEST: Are the two heats significantly different?
+--------------------------------------------------------------------------------
+
+Independent t-test:
+  t-statistic: -1.561
+  Degrees of freedom: 8
+  Mean difference: 9.62 seconds
+  Cohen's d (effect size): 0.987
+
+Effect size interpretation: large
+
+✗ Heat differences are NOT statistically significant
+  → Raw times may be fair, but adjustment still provides useful perspective
+
+================================================================================
+METHOD 1: Heat Average Adjustment
+================================================================================
+Adjusts each time based on: Adjusted = Raw - (Heat Mean - Overall Mean)
+
+Rank   Crew                 Heat         Raw Time     Adjusted     Adjustment  
+-------------------------------------------------------------------------------------
+1      Methodist            Final 2      3:20.0       3:15.2        +4.81s
+2      Enniskillen A        Final 1      3:12.9       3:17.7        -4.81s
+3      Castleconnel         Final 1      3:17.5       3:22.3        -4.81s
+4      St Josephs           Final 1      3:21.9       3:26.7        -4.81s
+5      St. Michaels         Final 2      3:33.5       3:28.7        +4.81s
+6      Pres Cork            Final 2      3:35.2       3:30.4        +4.81s
+7      Galway               Final 2      3:40.1       3:35.3        +4.81s
+8      Col Iognaid          Final 1      3:30.9       3:35.7        -4.81s
+9      Athlone              Final 2      3:42.1       3:37.3        +4.81s
+10     Enniskillen B        Final 1      3:39.6       3:44.4        -4.81s
+
+================================================================================
+METHOD 2: Median-Based Adjustment (More robust to outliers)
+================================================================================
+Adjusts each time based on: Adjusted = Raw - (Heat Median - Overall Median)
+
+Rank   Crew                 Heat         Raw Time     Adjusted     Adjustment  
+-------------------------------------------------------------------------------------
+1      Methodist            Final 2      3:20.0       3:17.0        +3.00s
+2      Enniskillen A        Final 1      3:12.9       3:23.2       -10.30s
+3      Castleconnel         Final 1      3:17.5       3:27.8       -10.30s
+4      St. Michaels         Final 2      3:33.5       3:30.5        +3.00s
+5      St Josephs           Final 1      3:21.9       3:32.2       -10.30s
+6      Pres Cork            Final 2      3:35.2       3:32.2        +3.00s
+7      Galway               Final 2      3:40.1       3:37.1        +3.00s
+8      Athlone              Final 2      3:42.1       3:39.1        +3.00s
+9      Col Iognaid          Final 1      3:30.9       3:41.2       -10.30s
+10     Enniskillen B        Final 1      3:39.6       3:49.9       -10.30s
+
+================================================================================
+METHOD 3: Within-Heat Percentile Ranking
+================================================================================
+Converts times to percentiles within each heat, then maps to overall distribution
+
+Rank   Crew                 Heat         Raw Time     Percentile   Adjusted    
+------------------------------------------------------------------------------------------
+1      Enniskillen A        Final 1      3:12.9        10.0%      3:17.0      
+2      Methodist            Final 2      3:20.0        10.0%      3:17.0      
+3      Castleconnel         Final 1      3:17.5        30.0%      3:21.3      
+4      St. Michaels         Final 2      3:33.5        30.0%      3:21.3      
+5      St Josephs           Final 1      3:21.9        50.0%      3:32.2      
+6      Pres Cork            Final 2      3:35.2        50.0%      3:32.2      
+7      Col Iognaid          Final 1      3:30.9        70.0%      3:36.5      
+8      Galway               Final 2      3:40.1        70.0%      3:36.5      
+9      Enniskillen B        Final 1      3:39.6        90.0%      3:40.3      
+10     Athlone              Final 2      3:42.1        90.0%      3:40.3      
+
+================================================================================
+GALWAY ANALYSIS
+================================================================================
+
+Heat Average Adjustment:
+  Raw rank: 9th (3:40.1)
+  Adjusted rank: 7th
+  Adjusted time: 3:35.3
+  Heat adjustment: +4.81 seconds
+
+Median-Based Adjustment:
+  Raw rank: 9th (3:40.1)
+  Adjusted rank: 7th
+  Adjusted time: 3:37.1
+  Heat adjustment: +3.00 seconds
+
+Percentile Adjustment:
+  Raw rank: 9th (3:40.1)
+  Adjusted rank: 8th
+  Adjusted time: 3:36.5
+
+================================================================================
+RECOMMENDATIONS
+================================================================================
+
+For rowing regattas with random heat seeding:
+
+1. HEAT AVERAGE ADJUSTMENT (Method 1)
+   - Most commonly used in rowing
+   - Simple and transparent
+   - Assumes random distribution of talent across heats
+   - Best when heats are roughly equal size
+   
+2. MEDIAN-BASED ADJUSTMENT (Method 2)
+   - More robust if one crew is much slower/faster than others
+   - Good for small heats (3-6 crews)
+   - Less affected by outliers
+   
+3. PERCENTILE RANKING (Method 3)
+   - Best for larger heats (6+ crews)
+   - Most robust to non-normal distributions
+   - Loses some precision with very small heats
+
+WHEN TO USE ADJUSTMENTS:
+- If statistical tests show significance: Adjustments are justified
+- If average times differ by >3 seconds: Consider adjustment
+- If conditions (wind, water) were clearly different: Use adjustment
+- For selection decisions: Show both raw and adjusted rankings
+
+For this M J15 8x+ event:
+- Heat 1 average: 3:24.6
+- Heat 2 average: 3:34.2
+- Difference: 9.62 seconds
+
+IMPORTANT: No statistical method can perfectly separate crew ability from 
+conditions. Always consider:
+- Recorded wind/water conditions
+- Lane assignments (some lanes may be favored)
+- Time of day effects (if heats run hours apart)
+- Visual observations of rowing quality
+

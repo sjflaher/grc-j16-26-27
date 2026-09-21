@@ -1,0 +1,976 @@
+{
+  "clubs": {
+    "Arklow Rowing Club": {
+      "description": "Orange & White",
+      "primary": "#FF8C00",
+      "secondary": "#FFFFFF",
+      "colors": [
+        "#FF8C00",
+        "#FFFFFF"
+      ]
+    },
+    "Athlone Boat Club": {
+      "description": "Green & Red",
+      "primary": "#228B22",
+      "secondary": "#DC143C",
+      "colors": [
+        "#228B22",
+        "#DC143C"
+      ]
+    },
+    "Athlone": {
+      "description": "Green & Red",
+      "primary": "#228B22",
+      "secondary": "#DC143C",
+      "colors": [
+        "#228B22",
+        "#DC143C"
+      ]
+    },
+    "Athlunkard Boat Club": {
+      "description": "Crimson & Blue",
+      "primary": "#DC143C",
+      "secondary": "#0066CC",
+      "colors": [
+        "#DC143C",
+        "#0066CC"
+      ]
+    },
+    "Ballycotton Rowing Club": {
+      "description": "Green, Black and white",
+      "primary": "#228B22",
+      "secondary": "#000000",
+      "colors": [
+        "#228B22",
+        "#000000",
+        "#FFFFFF"
+      ]
+    },
+    "Bann Rowing Club": {
+      "description": "Red & White",
+      "primary": "#DC143C",
+      "secondary": "#FFFFFF",
+      "colors": [
+        "#DC143C",
+        "#FFFFFF"
+      ]
+    },
+    "Belfast Boat Club": {
+      "description": "Dark Blue & White",
+      "primary": "#00008B",
+      "secondary": "#FFFFFF",
+      "colors": [
+        "#00008B",
+        "#FFFFFF"
+      ]
+    },
+    "Belfast Rowing Club": {
+      "description": "Red, White & Cambridge Blue",
+      "primary": "#DC143C",
+      "secondary": "#FFFFFF",
+      "colors": [
+        "#DC143C",
+        "#FFFFFF",
+        "#A3C1AD"
+      ]
+    },
+    "Belturbet Rowing Club": {
+      "description": "Maroon and White",
+      "primary": "#800000",
+      "secondary": "#FFFFFF",
+      "colors": [
+        "#800000",
+        "#FFFFFF"
+      ]
+    },
+    "Blackrock College Rowing Club": {
+      "description": "Royal Blue and White",
+      "primary": "#4169E1",
+      "secondary": "#FFFFFF",
+      "colors": [
+        "#4169E1",
+        "#FFFFFF"
+      ]
+    },
+    "Blackrock": {
+      "description": "Royal Blue and White",
+      "primary": "#4169E1",
+      "secondary": "#FFFFFF",
+      "colors": [
+        "#4169E1",
+        "#FFFFFF"
+      ]
+    },
+    "Cappoquin Rowing Club": {
+      "description": "Navy",
+      "primary": "#000080",
+      "colors": [
+        "#000080"
+      ]
+    },
+    "Carlow Rowing Club": {
+      "description": "Green & White",
+      "primary": "#228B22",
+      "secondary": "#FFFFFF",
+      "colors": [
+        "#228B22",
+        "#FFFFFF"
+      ]
+    },
+    "Castleconnell BC": {
+      "description": "Red & Grey",
+      "primary": "#DC143C",
+      "secondary": "#808080",
+      "colors": [
+        "#DC143C",
+        "#808080"
+      ]
+    },
+    "Castleconnel": {
+      "description": "Red & Grey",
+      "primary": "#DC143C",
+      "secondary": "#808080",
+      "colors": [
+        "#DC143C",
+        "#808080"
+      ]
+    },
+    "Christian Brothers College Rowing Club": {
+      "description": "Black with yellow and red stripe. Oars red black yellow",
+      "primary": "#000000",
+      "secondary": "#FFD700",
+      "colors": [
+        "#000000",
+        "#FFD700",
+        "#DC143C"
+      ]
+    },
+    "City of Derry Boating Club": {
+      "description": "Blue with White Star",
+      "primary": "#0066CC",
+      "secondary": "#FFFFFF",
+      "colors": [
+        "#0066CC",
+        "#FFFFFF"
+      ]
+    },
+    "Clonmel Rowing Club": {
+      "description": "Blue & White Stripe",
+      "primary": "#0066CC",
+      "secondary": "#FFFFFF",
+      "colors": [
+        "#0066CC",
+        "#FFFFFF"
+      ]
+    },
+    "Colaiste Iognaid Rowing Club": {
+      "description": "Maroon & White",
+      "primary": "#800000",
+      "secondary": "#FFFFFF",
+      "colors": [
+        "#800000",
+        "#FFFFFF"
+      ]
+    },
+    "Col Iognaid": {
+      "description": "Maroon & White",
+      "primary": "#800000",
+      "secondary": "#FFFFFF",
+      "colors": [
+        "#800000",
+        "#FFFFFF"
+      ]
+    },
+    "Coleraine Grammar School Rowing Club": {
+      "description": "Green, Red, & Blue",
+      "primary": "#228B22",
+      "secondary": "#DC143C",
+      "colors": [
+        "#228B22",
+        "#DC143C",
+        "#0066CC"
+      ]
+    },
+    "Commercial RC": {
+      "description": "Myrtle Green, White & Azure Blue",
+      "primary": "#317873",
+      "secondary": "#FFFFFF",
+      "colors": [
+        "#317873",
+        "#FFFFFF",
+        "#007FFF"
+      ]
+    },
+    "Cork BC": {
+      "description": "Chocolate Brown & White",
+      "primary": "#3F2212",
+      "secondary": "#FFFFFF",
+      "colors": [
+        "#3F2212",
+        "#FFFFFF"
+      ]
+    },
+    "Cove Rowing": {
+      "description": "Black, Red, Yellow",
+      "primary": "#000000",
+      "secondary": "#DC143C",
+      "colors": [
+        "#000000",
+        "#DC143C",
+        "#FFD700"
+      ]
+    },
+    "Cumann Ramhaíochta Cholaiste na Coiribe": {
+      "description": "Teal, Black & White",
+      "primary": "#008080",
+      "secondary": "#000000",
+      "colors": [
+        "#008080",
+        "#000000",
+        "#FFFFFF"
+      ]
+    },
+    "Dublin City Coastal Rowing Club": {
+      "description": "Black and Gold",
+      "primary": "#000000",
+      "secondary": "#FFD700",
+      "colors": [
+        "#000000",
+        "#FFD700"
+      ]
+    },
+    "Dublin University Boat Club": {
+      "description": "Black & White, Royal Blue Shield",
+      "primary": "#000000",
+      "secondary": "#FFFFFF",
+      "colors": [
+        "#000000",
+        "#FFFFFF",
+        "#4169E1"
+      ]
+    },
+    "Dublin University Ladies Boat Club": {
+      "description": "Black, White & Pink",
+      "primary": "#000000",
+      "secondary": "#FFFFFF",
+      "colors": [
+        "#000000",
+        "#FFFFFF",
+        "#FFC0CB"
+      ]
+    },
+    "East Ferry Rowing Club": {
+      "description": "Red and Grey",
+      "primary": "#DC143C",
+      "secondary": "#808080",
+      "colors": [
+        "#DC143C",
+        "#808080"
+      ]
+    },
+    "Edermine Ferry Rowing Club": {
+      "description": "Navy and Blue",
+      "primary": "#000080",
+      "secondary": "#0066CC",
+      "colors": [
+        "#000080",
+        "#0066CC"
+      ]
+    },
+    "Enniskillen Royal Boat Club": {
+      "description": "Blue & Red",
+      "primary": "#000035",
+      "secondary": "#DC143C",
+      "colors": [
+        "#000035",
+        "#DC143C"
+      ]
+    },
+    "Enniskillen": {
+      "description": "Blue & Red",
+      "primary": "#000035",
+      "secondary": "#DC143C",
+      "colors": [
+        "#000035",
+        "#DC143C"
+      ]
+    },
+    "Enniskillen A": {
+      "description": "Blue & Red",
+      "primary": "#000035",
+      "secondary": "#DC143C",
+      "colors": [
+        "#000035",
+        "#DC143C"
+      ]
+    },
+    "Enniskillen B": {
+      "description": "Blue & Red",
+      "primary": "#000035",
+      "secondary": "#DC143C",
+      "colors": [
+        "#000035",
+        "#DC143C"
+      ]
+    },
+    "Fermoy Rowing Club": {
+      "description": "White & Green Hoops",
+      "primary": "#FFFFFF",
+      "secondary": "#228B22",
+      "colors": [
+        "#FFFFFF",
+        "#228B22"
+      ]
+    },
+    "Galley Flash Rowing Club": {
+      "description": "White and Green",
+      "primary": "#FFFFFF",
+      "secondary": "#228B22",
+      "colors": [
+        "#FFFFFF",
+        "#228B22"
+      ]
+    },
+    "Galway Rowing Club": {
+      "description": "Purple & Amber",
+      "primary": "#800080",
+      "secondary": "#FFBF00",
+      "colors": [
+        "#800080",
+        "#FFBF00"
+      ]
+    },
+    "Galway": {
+      "description": "Purple & Amber",
+      "primary": "#800080",
+      "secondary": "#FFBF00",
+      "colors": [
+        "#800080",
+        "#FFBF00"
+      ]
+    },
+    "Galway A": {
+      "description": "Purple & Amber",
+      "primary": "#800080",
+      "secondary": "#FFBF00",
+      "colors": [
+        "#800080",
+        "#FFBF00"
+      ]
+    },
+    "Galway B": {
+      "description": "Purple & Amber",
+      "primary": "#800080",
+      "secondary": "#FFBF00",
+      "colors": [
+        "#800080",
+        "#FFBF00"
+      ]
+    },
+    "Garda Síochána Boat Club": {
+      "description": "Azure Blue & White",
+      "primary": "#007FFF",
+      "secondary": "#FFFFFF",
+      "colors": [
+        "#007FFF",
+        "#FFFFFF"
+      ]
+    },
+    "Graiguenamanagh Rowing Club": {
+      "description": "Royal Blue",
+      "primary": "#4169E1",
+      "colors": [
+        "#4169E1"
+      ]
+    },
+    "Killorglin Rowing Club": {
+      "description": "Blue & White",
+      "primary": "#0066CC",
+      "secondary": "#FFFFFF",
+      "colors": [
+        "#0066CC",
+        "#FFFFFF"
+      ]
+    },
+    "Lady Elizabeth Boat Club": {
+      "description": "Ultra Marine & Old Gold",
+      "primary": "#4166F5",
+      "secondary": "#CFB53B",
+      "colors": [
+        "#4166F5",
+        "#CFB53B"
+      ]
+    },
+    "Lagan Scullers Club": {
+      "description": "Black with White Scull and Crossed Oars",
+      "primary": "#000000",
+      "secondary": "#FFFFFF",
+      "colors": [
+        "#000000",
+        "#FFFFFF"
+      ]
+    },
+    "Lee Rowing Club": {
+      "description": "Red & Black",
+      "primary": "#DC143C",
+      "secondary": "#000000",
+      "colors": [
+        "#DC143C",
+        "#000000"
+      ]
+    },
+    "Lee Valley Rowing Club": {
+      "description": "Red & Black",
+      "primary": "#DC143C",
+      "secondary": "#000000",
+      "colors": [
+        "#DC143C",
+        "#000000"
+      ]
+    },
+    "Limerick Boat Club": {
+      "description": "Black & White Horizontal Stripes",
+      "primary": "#000000",
+      "secondary": "#FFFFFF",
+      "colors": [
+        "#000000",
+        "#FFFFFF"
+      ]
+    },
+    "Methodist College Belfast Boat Club": {
+      "description": "Navy Blue/White",
+      "primary": "#000080",
+      "secondary": "#FFFFFF",
+      "colors": [
+        "#000080",
+        "#FFFFFF"
+      ]
+    },
+    "Methodist": {
+      "description": "Navy Blue/White",
+      "primary": "#000080",
+      "secondary": "#FFFFFF",
+      "colors": [
+        "#000080",
+        "#FFFFFF"
+      ]
+    },
+    "Neptune Rowing Club": {
+      "description": "Green & Black",
+      "primary": "#228B22",
+      "secondary": "#000000",
+      "colors": [
+        "#228B22",
+        "#000000"
+      ]
+    },
+    "New Ross Boat Club": {
+      "description": "Chocolate & Light Blue",
+      "primary": "#D2691E",
+      "secondary": "#ADD8E6",
+      "colors": [
+        "#D2691E",
+        "#ADD8E6"
+      ]
+    },
+    "Newry Rowing Club": {
+      "description": "Red & Black with Yellow Star",
+      "primary": "#DC143C",
+      "secondary": "#000000",
+      "colors": [
+        "#DC143C",
+        "#000000",
+        "#FFD700"
+      ]
+    },
+    "Northwest Rowing Club": {
+      "description": "Blue & White",
+      "primary": "#0066CC",
+      "secondary": "#FFFFFF",
+      "colors": [
+        "#0066CC",
+        "#FFFFFF"
+      ]
+    },
+    "Offaly Rowing Club": {
+      "description": "Grey & Red",
+      "primary": "#808080",
+      "secondary": "#DC143C",
+      "colors": [
+        "#808080",
+        "#DC143C"
+      ]
+    },
+    "Old Collegians Boat Club": {
+      "description": "Blue and Saffron",
+      "primary": "#0066CC",
+      "secondary": "#F4C430",
+      "colors": [
+        "#0066CC",
+        "#F4C430"
+      ]
+    },
+    "Olderfleet Rowing Club": {
+      "description": "Blue and Yellow",
+      "primary": "#0066CC",
+      "secondary": "#FFD700",
+      "colors": [
+        "#0066CC",
+        "#FFD700"
+      ]
+    },
+    "Phoenix Rowing Club": {
+      "description": "Black & Orange",
+      "primary": "#000000",
+      "secondary": "#FF8C00",
+      "colors": [
+        "#000000",
+        "#FF8C00"
+      ]
+    },
+    "Portadown Boat Club": {
+      "description": "Amber & Green",
+      "primary": "#FFBF00",
+      "secondary": "#228B22",
+      "colors": [
+        "#FFBF00",
+        "#228B22"
+      ]
+    },
+    "Portmagee Rowing Club": {
+      "description": "Dark Navy Blue and White",
+      "primary": "#000033",
+      "secondary": "#FFFFFF",
+      "colors": [
+        "#000033",
+        "#FFFFFF"
+      ]
+    },
+    "Portora Boat Club": {
+      "description": "Black & Yellow",
+      "primary": "#000000",
+      "secondary": "#FFD700",
+      "colors": [
+        "#000000",
+        "#FFD700"
+      ]
+    },
+    "Presentation Brothers College Cork": {
+      "description": "Black, White Hoops, Purple Trim",
+      "primary": "#000000",
+      "secondary": "#7F00FF",
+      "colors": [
+        "#000000",
+        "#7F00FF"
+      ]
+    },
+    "Pres Cork": {
+      "description": "Black, White Hoops, Purple Trim",
+      "primary": "#000000",
+      "secondary": "#7F00FF",
+      "colors": [
+        "#000000",
+        "#7F00FF"
+      ]
+    },
+    "Queens University Belfast Boat Club": {
+      "description": "Royal Blue, Emerald, Black and White",
+      "primary": "#4169E1",
+      "secondary": "#50C878",
+      "colors": [
+        "#4169E1",
+        "#50C878",
+        "#000000",
+        "#FFFFFF"
+      ]
+    },
+    "Queens University Belfast Ladies Boat Club": {
+      "description": "Royal Blue, Green, White & Black Hoop",
+      "primary": "#4169E1",
+      "secondary": "#228B22",
+      "colors": [
+        "#4169E1",
+        "#228B22",
+        "#FFFFFF",
+        "#000000"
+      ]
+    },
+    "Ring Rowing Club": {
+      "description": "Yellow and Black",
+      "primary": "#FFD700",
+      "secondary": "#000000",
+      "colors": [
+        "#FFD700",
+        "#000000"
+      ]
+    },
+    "Rosscarbery Rowing Club": {
+      "description": "Purple and Black",
+      "primary": "#800080",
+      "secondary": "#000000",
+      "colors": [
+        "#800080",
+        "#000000"
+      ]
+    },
+    "Shandon Boat Club": {
+      "description": "Light Blue",
+      "primary": "#ADD8E6",
+      "colors": [
+        "#ADD8E6"
+      ]
+    },
+    "Shannon Rowing Club": {
+      "description": "Royal Blue & White Wave",
+      "primary": "#4169E1",
+      "secondary": "#FFFFFF",
+      "colors": [
+        "#4169E1",
+        "#FFFFFF"
+      ]
+    },
+    "Skibbereen Rowing Club": {
+      "description": "Red & White",
+      "primary": "#DC143C",
+      "secondary": "#FFFFFF",
+      "colors": [
+        "#DC143C",
+        "#FFFFFF"
+      ]
+    },
+    "Sligo Rowing Club": {
+      "description": "Black and Red",
+      "primary": "#000000",
+      "secondary": "#DC143C",
+      "colors": [
+        "#000000",
+        "#DC143C"
+      ]
+    },
+    "St. Josephs Rowing Club": {
+      "description": "Unknown - not in Rowing Ireland listing",
+      "primary": "#0066CC",
+      "colors": [
+        "#0066CC"
+      ]
+    },
+    "St Josephs": {
+      "description": "Unknown - not in Rowing Ireland listing",
+      "primary": "#0066CC",
+      "colors": [
+        "#0066CC"
+      ]
+    },
+    "St. Kearns Rowing Club": {
+      "description": "Yellow and Red",
+      "primary": "#FFD700",
+      "secondary": "#DC143C",
+      "colors": [
+        "#FFD700",
+        "#DC143C"
+      ]
+    },
+    "St. Michael's Rowing Club": {
+      "description": "Royal Blue & Old Gold",
+      "primary": "#000080",
+      "secondary": "#CFB53B",
+      "colors": [
+        "#000080",
+        "#CFB53B"
+      ]
+    },
+    "St. Michaels": {
+      "description": "Royal Blue & Old Gold",
+      "primary": "#000080",
+      "secondary": "#CFB53B",
+      "colors": [
+        "#000080",
+        "#CFB53B"
+      ]
+    },
+    "St. Michael's Rowing Club Dun Laoghaire": {
+      "description": "Navy",
+      "primary": "#000080",
+      "colors": [
+        "#000080"
+      ]
+    },
+    "Stella Maris Rowing Club": {
+      "description": "Sky Blue and Navy Blue",
+      "primary": "#0066CC",
+      "secondary": "#000080",
+      "colors": [
+        "#0066CC",
+        "#000080"
+      ]
+    },
+    "The Lady Victoria Boat Club": {
+      "description": "Navy Blue, Green, Red and Silver",
+      "primary": "#000080",
+      "secondary": "#228B22",
+      "colors": [
+        "#000080",
+        "#228B22",
+        "#DC143C",
+        "#C0C0C0"
+      ]
+    },
+    "Tralee Rowing Club": {
+      "description": "Navy, Red and White",
+      "primary": "#000080",
+      "secondary": "#DC143C",
+      "colors": [
+        "#000080",
+        "#DC143C",
+        "#FFFFFF"
+      ]
+    },
+    "Tribesmen Rowing Club": {
+      "description": "Black",
+      "primary": "#000000",
+      "colors": [
+        "#000000"
+      ]
+    },
+    "Triton Rowing Club": {
+      "description": "Electric Green top with Black bottoms. White blades for oars",
+      "primary": "#228B22",
+      "secondary": "#FFFFFF",
+      "colors": [
+        "#228B22",
+        "#FFFFFF",
+        "#000000"
+      ]
+    },
+    "UCC Rowing Club": {
+      "description": "Red, Black & White with Skull & Crossbones",
+      "primary": "#DC143C",
+      "secondary": "#000000",
+      "colors": [
+        "#DC143C",
+        "#000000",
+        "#FFFFFF"
+      ]
+    },
+    "UCD Boat Club": {
+      "description": "St. Patricks Blue and Saffron",
+      "primary": "#0066CC",
+      "secondary": "#F4C430",
+      "colors": [
+        "#0066CC",
+        "#F4C430"
+      ]
+    },
+    "University of Galway Boat Club": {
+      "description": "Maroon & White",
+      "primary": "#800000",
+      "secondary": "#FFFFFF",
+      "colors": [
+        "#800000",
+        "#FFFFFF"
+      ]
+    },
+    "University of Limerick Rowing Club": {
+      "description": "Light green and dark green",
+      "primary": "#228B22",
+      "secondary": "#228B22",
+      "colors": [
+        "#228B22",
+        "#228B22"
+      ]
+    },
+    "Waterford Boat Club": {
+      "description": "Navy & White Hoop",
+      "primary": "#000080",
+      "secondary": "#FFFFFF",
+      "colors": [
+        "#000080",
+        "#FFFFFF"
+      ]
+    },
+    "Waterville Rowing Club": {
+      "description": "Red and yellow",
+      "primary": "#DC143C",
+      "secondary": "#FFD700",
+      "colors": [
+        "#DC143C",
+        "#FFD700"
+      ]
+    },
+    "Wicklow Rowing Club": {
+      "description": "Royal Blue and White",
+      "primary": "#4169E1",
+      "secondary": "#FFFFFF",
+      "colors": [
+        "#4169E1",
+        "#FFFFFF"
+      ]
+    },
+    "Workmens Rowing Club": {
+      "description": "White with Red Stripe",
+      "primary": "#FFFFFF",
+      "secondary": "#DC143C",
+      "colors": [
+        "#FFFFFF",
+        "#DC143C"
+      ]
+    },
+    "Bann": {
+      "description": "Red & White",
+      "primary": "#DC143C",
+      "secondary": "#FFFFFF",
+      "colors": [
+        "#DC143C",
+        "#FFFFFF"
+      ]
+    },
+    "Commercial": {
+      "description": "Myrtle Green, White & Azure Blue",
+      "primary": "#317873",
+      "secondary": "#FFFFFF",
+      "colors": [
+        "#317873",
+        "#FFFFFF",
+        "#007FFF"
+      ]
+    },
+    "Cork": {
+      "description": "Chocolate Brown & White",
+      "primary": "#3F2212",
+      "secondary": "#FFFFFF",
+      "colors": [
+        "#3F2212",
+        "#FFFFFF"
+      ]
+    },
+    "Fermoy": {
+      "description": "White & Green Hoops",
+      "primary": "#FFFFFF",
+      "secondary": "#228B22",
+      "colors": [
+        "#FFFFFF",
+        "#228B22"
+      ]
+    },
+    "Lee": {
+      "description": "Red & Black",
+      "primary": "#DC143C",
+      "secondary": "#000000",
+      "colors": [
+        "#DC143C",
+        "#000000"
+      ]
+    },
+    "Newry": {
+      "description": "Red & Black with Yellow Star",
+      "primary": "#DC143C",
+      "secondary": "#000000",
+      "colors": [
+        "#DC143C",
+        "#000000",
+        "#FFD700"
+      ]
+    },
+    "Northwest": {
+      "description": "Blue & White",
+      "primary": "#0066CC",
+      "secondary": "#FFFFFF",
+      "colors": [
+        "#0066CC",
+        "#FFFFFF"
+      ]
+    },
+    "Offaly": {
+      "description": "Grey & Red",
+      "primary": "#808080",
+      "secondary": "#DC143C",
+      "colors": [
+        "#808080",
+        "#DC143C"
+      ]
+    },
+    "Shandon": {
+      "description": "Light Blue",
+      "primary": "#ADD8E6",
+      "colors": [
+        "#ADD8E6"
+      ]
+    },
+    "Skibbereen": {
+      "description": "Red & White",
+      "primary": "#DC143C",
+      "secondary": "#FFFFFF",
+      "colors": [
+        "#DC143C",
+        "#FFFFFF"
+      ]
+    },
+    "Sligo": {
+      "description": "Black and Red",
+      "primary": "#000000",
+      "secondary": "#DC143C",
+      "colors": [
+        "#000000",
+        "#DC143C"
+      ]
+    },
+    "Waterford": {
+      "description": "Navy & White Hoop",
+      "primary": "#000080",
+      "secondary": "#FFFFFF",
+      "colors": [
+        "#000080",
+        "#FFFFFF"
+      ]
+    },
+    "Bantry": {
+      "description": "Unknown - not in Rowing Ireland listing",
+      "primary": "#FF6B6B",
+      "colors": [
+        "#FF6B6B"
+      ]
+    },
+    "Carrick": {
+      "description": "Unknown - not in Rowing Ireland listing",
+      "primary": "#4ECDC4",
+      "colors": [
+        "#4ECDC4"
+      ]
+    },
+    "CRCC": {
+      "description": "Cumann Ramhaíochta Cholaiste na Coiribe - Teal, Black & White",
+      "primary": "#008080",
+      "secondary": "#000000",
+      "colors": [
+        "#008080",
+        "#000000",
+        "#FFFFFF"
+      ]
+    },
+    "Garda": {
+      "description": "Azure Blue & White",
+      "primary": "#007FFF",
+      "secondary": "#FFFFFF",
+      "colors": [
+        "#007FFF",
+        "#FFFFFF"
+      ],
+      "alias_of": "Garda Síochána Boat Club"
+    },
+    "Lee Valley": {
+      "description": "Red & Black",
+      "primary": "#DC143C",
+      "secondary": "#000000",
+      "colors": [
+        "#DC143C",
+        "#000000"
+      ],
+      "alias_of": "Lee Valley Rowing Club"
+    }
+  },
+  "notes": {
+    "source": "Rowing Ireland - https://www.rowingireland.ie/rowing-for-all/find-a-club-in-your-area/",
+    "generated": "2026-09-21",
+    "usage": "Use 'primary' color as main data point color. Use 'secondary' for accents/borders. Full 'colors' array available for multi-color gradients."
+  }
+}

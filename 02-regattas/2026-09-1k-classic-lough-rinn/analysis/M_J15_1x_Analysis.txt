@@ -1,0 +1,247 @@
+====================================================================================================
+M J15 1x (SINGLES) HEAT ADJUSTMENT ANALYSIS
+Races 116-128 (13 Finals) - Rowing Ireland 1k Classic 2026
+====================================================================================================
+
+Loaded 51 rowers across 13 finals
+Galway crews: 3
+  - Galway, McGowan, D in Final 1
+  - Galway, Tracy, F in Final 6
+  - Galway, Hall, M in Final 13
+
+====================================================================================================
+HEAT STATISTICS
+====================================================================================================
+
+Overall mean time: 4:10.1
+
+Heat         Count    Mean         Median       Std Dev   
+------------------------------------------------------------
+Final 1      5        4:12.1       4:14.3       14.29     
+Final 2      6        4:22.5       4:19.4       17.10     
+Final 3      4        4:30.8       4:33.0       14.33     
+Final 5      6        3:36.5       3:38.8       14.00     
+Final 6      5        4:15.3       4:17.9       10.84     
+Final 7      6        4:13.5       4:18.8       18.33     
+Final 8      6        4:19.9       4:24.8       19.14     
+Final 11     5        4:14.0       4:15.5       13.43     
+Final 12     4        4:27.3       4:28.3       13.17     
+Final 13     4        3:30.3       3:34.6       12.40     
+
+Fastest heat: Final 13 (3:30.3 average)
+Slowest heat: Final 3 (4:30.8 average)
+Heat speed range: 1:00.5
+
+====================================================================================================
+RAW TIMES (No Adjustments)
+====================================================================================================
+
+Rank   Crew                                     Heat         Time        
+---------------------------------------------------------------------------
+1      Garda, Roche, L                          Final 13     3:12.1      
+2      Newry, O Brien, T                        Final 5      3:17.7      
+3      St. Michaels, Larkin, A                  Final 5      3:23.3      
+4      St. Michaels, Lovell, D                  Final 13     3:33.7      
+5      Athlone, May, D                          Final 5      3:33.9      
+6      Carrick, O'Donaile, R                    Final 13     3:35.4      
+7      Galway, Hall, M                          Final 13     3:39.9        ← GALWAY
+8      CRCC, O'Breachain, C                     Final 5      3:43.6      
+9      Cork, Wall, E                            Final 8      3:44.6      
+10     Col Iognaid, Donnellan, P                Final 5      3:47.3      
+11     Enniskillen, Allen, J                    Final 7      3:48.4      
+12     Skibbereen, Ferguson, O                  Final 1      3:51.1      
+13     St. Michaels, Tarpey, J                  Final 5      3:53.2      
+14     Lee Valley, McGillcuddy, M               Final 7      3:54.4      
+15     Shandon, Kenneally, R                    Final 11     3:58.8      
+16     St. Michaels, Markham, E                 Final 6      4:02.6      
+17     Shandon, O'Donovan, B                    Final 11     4:04.2      
+18     Bann, Carey, O                           Final 2      4:05.3      
+19     Bann, Woods, J                           Final 2      4:06.7      
+20     Galway, Tracy, F                         Final 6      4:06.7        ← GALWAY
+21     Galway, McGowan, D                       Final 1      4:09.2        ← GALWAY
+22     Cork, O'Shea, S                          Final 12     4:11.7      
+23     Northwest, Krzempiec, A                  Final 3      4:13.1      
+24     Lee, Visser, I                           Final 2      4:13.5      
+25     St. Michaels, Healy, A                   Final 1      4:14.3      
+26     Cork, O'Riordan, C                       Final 1      4:15.2      
+27     Enniskillen, Bell, F                     Final 11     4:15.5      
+28     St. Michaels, Finn, C                    Final 8      4:15.6      
+29     Enniskillen, Elliott, G                  Final 7      4:16.0      
+30     Waterford, Mullins, L                    Final 6      4:17.9      
+31     Shandon, O'Súilleabháin, E               Final 11     4:18.0      
+32     St. Michaels, Shannon, G                 Final 6      4:19.2      
+33     Col Iognaid, Lappin, H                   Final 8      4:21.1      
+34     St. Michaels, Harrison, J                Final 7      4:21.6      
+35     Cork, Kelleher, C                        Final 12     4:21.7      
+36     Offaly, O Grady, B                       Final 2      4:25.2      
+37     Bann, Lynn, I                            Final 3      4:25.2      
+38     Sligo, Foley, B                          Final 7      4:25.6      
+39     Athlone, Dolan, F                        Final 8      4:28.5      
+40     Enniskillen, Collins, O                  Final 6      4:29.9      
+41     Athlone, Mitchell, C                     Final 8      4:29.9      
+42     Col Iognaid, O'Conaire, K                Final 1      4:30.9      
+43     St Josephs, O'Farrell, D                 Final 11     4:33.4      
+44     Bann, Patterson, C                       Final 12     4:34.9      
+45     St. Michaels, Askin, S                   Final 7      4:35.1      
+46     Enniskillen, Cuthbertson, J              Final 2      4:37.3      
+47     St. Michaels, Haugh, C                   Final 8      4:39.7      
+48     Col Iognaid, Warner, F                   Final 3      4:40.8      
+49     Shandon, O'Brien, A                      Final 12     4:41.0      
+50     Athlone, Cleary, J                       Final 3      4:43.9      
+51     Methodist, Garcia, J                     Final 2      4:47.2      
+
+====================================================================================================
+HEAT-ADJUSTED TIMES (Accounts for heat speed differences)
+====================================================================================================
+
+Rank   Crew                                     Heat         Raw          Adj      Adjusted    
+-----------------------------------------------------------------------------------------------
+1      Cork, Wall, E                            Final 8      3:44.6        +9.8s  3:34.8      
+2      Enniskillen, Allen, J                    Final 7      3:48.4        +3.4s  3:45.0      
+3      Skibbereen, Ferguson, O                  Final 1      3:51.1        +2.0s  3:49.1      
+4      Lee Valley, McGillcuddy, M               Final 7      3:54.4        +3.4s  3:51.0      
+5      Newry, O Brien, T                        Final 5      3:17.7       -33.6s  3:51.3      
+6      Garda, Roche, L                          Final 13     3:12.1       -39.8s  3:51.9      
+7      Northwest, Krzempiec, A                  Final 3      4:13.1       +20.7s  3:52.4      
+8      Bann, Carey, O                           Final 2      4:05.3       +12.4s  3:52.9      
+9      Bann, Woods, J                           Final 2      4:06.7       +12.4s  3:54.3      
+10     Cork, O'Shea, S                          Final 12     4:11.7       +17.2s  3:54.5      
+11     Shandon, Kenneally, R                    Final 11     3:58.8        +3.9s  3:54.9      
+12     St. Michaels, Larkin, A                  Final 5      3:23.3       -33.6s  3:56.9      
+13     St. Michaels, Markham, E                 Final 6      4:02.6        +5.2s  3:57.4      
+14     Shandon, O'Donovan, B                    Final 11     4:04.2        +3.9s  4:00.3      
+15     Lee, Visser, I                           Final 2      4:13.5       +12.4s  4:01.1      
+16     Galway, Tracy, F                         Final 6      4:06.7        +5.2s  4:01.5        ← GALWAY
+17     Cork, Kelleher, C                        Final 12     4:21.7       +17.2s  4:04.5      
+18     Bann, Lynn, I                            Final 3      4:25.2       +20.7s  4:04.5      
+19     St. Michaels, Finn, C                    Final 8      4:15.6        +9.8s  4:05.8      
+20     Galway, McGowan, D                       Final 1      4:09.2        +2.0s  4:07.2        ← GALWAY
+21     Athlone, May, D                          Final 5      3:33.9       -33.6s  4:07.5      
+22     Col Iognaid, Lappin, H                   Final 8      4:21.1        +9.8s  4:11.3      
+23     Enniskillen, Bell, F                     Final 11     4:15.5        +3.9s  4:11.6      
+24     St. Michaels, Healy, A                   Final 1      4:14.3        +2.0s  4:12.3      
+25     Enniskillen, Elliott, G                  Final 7      4:16.0        +3.4s  4:12.6      
+26     Waterford, Mullins, L                    Final 6      4:17.9        +5.2s  4:12.7      
+27     Offaly, O Grady, B                       Final 2      4:25.2       +12.4s  4:12.8      
+28     Cork, O'Riordan, C                       Final 1      4:15.2        +2.0s  4:13.2      
+29     St. Michaels, Lovell, D                  Final 13     3:33.7       -39.8s  4:13.5      
+30     St. Michaels, Shannon, G                 Final 6      4:19.2        +5.2s  4:14.0      
+31     Shandon, O'Súilleabháin, E               Final 11     4:18.0        +3.9s  4:14.1      
+32     Carrick, O'Donaile, R                    Final 13     3:35.4       -39.8s  4:15.2      
+33     CRCC, O'Breachain, C                     Final 5      3:43.6       -33.6s  4:17.2      
+34     Bann, Patterson, C                       Final 12     4:34.9       +17.2s  4:17.7      
+35     St. Michaels, Harrison, J                Final 7      4:21.6        +3.4s  4:18.2      
+36     Athlone, Dolan, F                        Final 8      4:28.5        +9.8s  4:18.7      
+37     Galway, Hall, M                          Final 13     3:39.9       -39.8s  4:19.7        ← GALWAY
+38     Athlone, Mitchell, C                     Final 8      4:29.9        +9.8s  4:20.1      
+39     Col Iognaid, Warner, F                   Final 3      4:40.8       +20.7s  4:20.1      
+40     Col Iognaid, Donnellan, P                Final 5      3:47.3       -33.6s  4:20.9      
+41     Sligo, Foley, B                          Final 7      4:25.6        +3.4s  4:22.2      
+42     Athlone, Cleary, J                       Final 3      4:43.9       +20.7s  4:23.2      
+43     Shandon, O'Brien, A                      Final 12     4:41.0       +17.2s  4:23.8      
+44     Enniskillen, Collins, O                  Final 6      4:29.9        +5.2s  4:24.7      
+45     Enniskillen, Cuthbertson, J              Final 2      4:37.3       +12.4s  4:24.9      
+46     St. Michaels, Tarpey, J                  Final 5      3:53.2       -33.6s  4:26.8      
+47     Col Iognaid, O'Conaire, K                Final 1      4:30.9        +2.0s  4:28.9      
+48     St Josephs, O'Farrell, D                 Final 11     4:33.4        +3.9s  4:29.5      
+49     St. Michaels, Haugh, C                   Final 8      4:39.7        +9.8s  4:29.9      
+50     St. Michaels, Askin, S                   Final 7      4:35.1        +3.4s  4:31.7      
+51     Methodist, Garcia, J                     Final 2      4:47.2       +12.4s  4:34.8      
+
+====================================================================================================
+GALWAY CREWS ANALYSIS
+====================================================================================================
+
+
+Galway, McGowan, D
+  Heat: Final 1
+  Raw time: 4:09.2
+  Raw rank: 21/51
+Traceback (most recent call last):
+  File "/private/tmp/m_j15_1x_analysis.py", line 313, in <module>
+    main()
+    ~~~~^^
+  File "/private/tmp/m_j15_1x_analysis.py", line 258, in main
+    print(f"  Heat adjustment: {galway['heat_adjustment']:+.1f}s")
+                                ~~~~~~^^^^^^^^^^^^^^^^^^^
+KeyError: 'heat_adjustment'
+26     Waterford, Mullins, L                    Final 6      4:17.9        +5.2s  4:12.7      
+27     Offaly, O Grady, B                       Final 2      4:25.2       +12.4s  4:12.8      
+28     Cork, O'Riordan, C                       Final 1      4:15.2        +2.0s  4:13.2      
+29     St. Michaels, Lovell, D                  Final 13     3:33.7       -39.8s  4:13.5      
+30     St. Michaels, Shannon, G                 Final 6      4:19.2        +5.2s  4:14.0      
+31     Shandon, O'Súilleabháin, E               Final 11     4:18.0        +3.9s  4:14.1      
+32     Carrick, O'Donaile, R                    Final 13     3:35.4       -39.8s  4:15.2      
+33     CRCC, O'Breachain, C                     Final 5      3:43.6       -33.6s  4:17.2      
+34     Bann, Patterson, C                       Final 12     4:34.9       +17.2s  4:17.7      
+35     St. Michaels, Harrison, J                Final 7      4:21.6        +3.4s  4:18.2      
+36     Athlone, Dolan, F                        Final 8      4:28.5        +9.8s  4:18.7      
+37     Galway, Hall, M                          Final 13     3:39.9       -39.8s  4:19.7        ← GALWAY
+38     Athlone, Mitchell, C                     Final 8      4:29.9        +9.8s  4:20.1      
+39     Col Iognaid, Warner, F                   Final 3      4:40.8       +20.7s  4:20.1      
+40     Col Iognaid, Donnellan, P                Final 5      3:47.3       -33.6s  4:20.9      
+41     Sligo, Foley, B                          Final 7      4:25.6        +3.4s  4:22.2      
+42     Athlone, Cleary, J                       Final 3      4:43.9       +20.7s  4:23.2      
+43     Shandon, O'Brien, A                      Final 12     4:41.0       +17.2s  4:23.8      
+44     Enniskillen, Collins, O                  Final 6      4:29.9        +5.2s  4:24.7      
+45     Enniskillen, Cuthbertson, J              Final 2      4:37.3       +12.4s  4:24.9      
+46     St. Michaels, Tarpey, J                  Final 5      3:53.2       -33.6s  4:26.8      
+47     Col Iognaid, O'Conaire, K                Final 1      4:30.9        +2.0s  4:28.9      
+48     St Josephs, O'Farrell, D                 Final 11     4:33.4        +3.9s  4:29.5      
+49     St. Michaels, Haugh, C                   Final 8      4:39.7        +9.8s  4:29.9      
+50     St. Michaels, Askin, S                   Final 7      4:35.1        +3.4s  4:31.7      
+51     Methodist, Garcia, J                     Final 2      4:47.2       +12.4s  4:34.8      
+
+====================================================================================================
+GALWAY CREWS ANALYSIS
+====================================================================================================
+
+
+Galway, McGowan, D
+  Heat: Final 1
+  Raw time: 4:09.2
+  Raw rank: 21/51
+  Heat adjustment: +2.0s
+  Adjusted time: 4:07.2
+  Adjusted rank: 20/51
+  Rank change: +1 positions
+  Position in Final 1: 2/5
+
+Galway, Tracy, F
+  Heat: Final 6
+  Raw time: 4:06.7
+  Raw rank: 20/51
+  Heat adjustment: +5.2s
+  Adjusted time: 4:01.5
+  Adjusted rank: 16/51
+  Rank change: +4 positions
+  Position in Final 6: 2/5
+
+Galway, Hall, M
+  Heat: Final 13
+  Raw time: 3:39.9
+  Raw rank: 7/51
+  Heat adjustment: -39.8s
+  Adjusted time: 4:19.7
+  Adjusted rank: 37/51
+  Rank change: -30 positions
+  Position in Final 13: 4/4
+
+====================================================================================================
+SUMMARY & RECOMMENDATIONS
+====================================================================================================
+
+Heat speed variation: 1:00.5
+→ LARGE heat variation - heat adjustment is HIGHLY recommended
+
+Galway crews performance:
+  McGowan: Improved from 21 to 20 (+1 positions)
+  Tracy: Improved from 20 to 16 (+4 positions)
+  Hall: Dropped from 7 to 37 (-30 positions)
+
+Statistical note:
+  With 10 heats, random heat assignment could create large time
+  variations. Heat-adjusted rankings provide a fairer comparison of actual
+  rowing ability independent of which heat crews were randomly assigned to.
+
+Full analysis saved to: ~/Documents/GRC/M_J15_1x_Analysis.txt

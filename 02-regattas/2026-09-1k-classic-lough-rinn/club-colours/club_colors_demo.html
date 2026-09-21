@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Irish Rowing Club Colors - Visual Reference</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background: #fafafa;
+            padding: 40px 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            color: #7f8c8d;
+            font-size: 1.1rem;
+        }
+        
+        .note {
+            background: #e8f4f8;
+            border-left: 4px solid #3498db;
+            padding: 15px 20px;
+            margin-bottom: 40px;
+            border-radius: 4px;
+        }
+        
+        .section-title {
+            font-size: 1.8rem;
+            color: #2c3e50;
+            margin: 40px 0 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #3498db;
+        }
+        
+        .color-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        
+        .color-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+        
+        .color-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        
+        .color-swatch {
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        
+        .color-label {
+            background: rgba(255,255,255,0.9);
+            padding: 5px 12px;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .color-info {
+            padding: 15px;
+        }
+        
+        .club-name {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 8px;
+        }
+        
+        .color-desc {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+            margin-bottom: 8px;
+        }
+        
+        .color-codes {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+        
+        .color-chip {
+            display: inline-block;
+            padding: 4px 8px;
+            background: #ecf0f1;
+            border-radius: 3px;
+            font-size: 0.75rem;
+            font-family: 'Courier New', monospace;
+            color: #2c3e50;
+        }
+        
+        .highlight {
+            border: 3px solid #f39c12;
+        }
+        
+        .updated-badge {
+            display: inline-block;
+            background: #e74c3c;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 3px;
+            font-size: 0.75rem;
+            margin-left: 8px;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🚣 Irish Rowing Club Colors</h1>
+            <p class="subtitle">Official colors from Rowing Ireland</p>
+        </header>
+        
+        <div class="note">
+            <strong>✨ NEW:</strong> Galway Rowing Club updated to official Purple & Amber (was dark red)
+        </div>
+        
+        <h2 class="section-title">Clubs in Your Regatta Data</h2>
+        
+        <div class="color-grid" id="regatta-clubs"></div>
+        
+        <h2 class="section-title">All Irish Rowing Clubs</h2>
+        
+        <div class="color-grid" id="all-clubs"></div>
+    </div>
+    
+    <script>
+        const regattaClubs = [
+            { name: "Galway", primary: "#800080", secondary: "#FFBF00", desc: "Purple & Amber", updated: true },
+            { name: "Enniskillen A", primary: "#0066CC", secondary: "#DC143C", desc: "Blue & Red" },
+            { name: "Methodist", primary: "#000080", secondary: "#FFFFFF", desc: "Navy Blue/White" },
+            { name: "Athlone", primary: "#228B22", secondary: "#DC143C", desc: "Green & Red" },
+            { name: "Castleconnel", primary: "#DC143C", secondary: "#808080", desc: "Red & Grey" },
+            { name: "Col Iognaid", primary: "#800000", secondary: "#FFFFFF", desc: "Maroon & White" },
+            { name: "Pres Cork", primary: "#000000", secondary: "#FFFFFF", desc: "Black, White Hoops, Purple Trim" },
+            { name: "St. Michaels", primary: "#4169E1", secondary: "#CFB53B", desc: "Royal Blue & Old Gold" },
+            { name: "Blackrock", primary: "#4169E1", secondary: "#FFFFFF", desc: "Royal Blue and White" }
+        ];
+        
+        const additionalClubs = [
+            { name: "Arklow", primary: "#FF8C00", secondary: "#FFFFFF", desc: "Orange & White" },
+            { name: "Athlunkard", primary: "#DC143C", secondary: "#0066CC", desc: "Crimson & Blue" },
+            { name: "Bann", primary: "#DC143C", secondary: "#FFFFFF", desc: "Red & White" },
+            { name: "Belfast Boat Club", primary: "#00008B", secondary: "#FFFFFF", desc: "Dark Blue & White" },
+            { name: "Cappoquin", primary: "#000080", desc: "Navy" },
+            { name: "Carlow", primary: "#228B22", secondary: "#FFFFFF", desc: "Green & White" },
+            { name: "Commercial", primary: "#317873", secondary: "#FFFFFF", desc: "Myrtle Green, White & Azure Blue" },
+            { name: "Cork BC", primary: "#3F2212", secondary: "#FFFFFF", desc: "Chocolate Brown & White" },
+            { name: "Dublin University BC", primary: "#000000", secondary: "#FFFFFF", desc: "Black & White, Royal Blue Shield" },
+            { name: "Fermoy", primary: "#FFFFFF", secondary: "#228B22", desc: "White & Green Hoops" },
+            { name: "Garda Síochána", primary: "#007FFF", secondary: "#FFFFFF", desc: "Azure Blue & White" },
+            { name: "Graiguenamanagh", primary: "#4169E1", desc: "Royal Blue" },
+            { name: "Lee", primary: "#DC143C", secondary: "#000000", desc: "Red & Black" },
+            { name: "Neptune", primary: "#228B22", secondary: "#000000", desc: "Green & Black" },
+            { name: "Portora", primary: "#000000", secondary: "#FFD700", desc: "Black & Yellow" },
+            { name: "Queens University Belfast", primary: "#4169E1", secondary: "#50C878", desc: "Royal Blue, Emerald, Black and White" },
+            { name: "Shannon", primary: "#4169E1", secondary: "#FFFFFF", desc: "Royal Blue & White Wave" },
+            { name: "Skibbereen", primary: "#DC143C", secondary: "#FFFFFF", desc: "Red & White" },
+            { name: "UCC", primary: "#DC143C", secondary: "#000000", desc: "Red, Black & White with Skull & Crossbones" },
+            { name: "UCD", primary: "#0066CC", secondary: "#F4C430", desc: "St. Patricks Blue and Saffron" }
+        ];
+        
+        function createColorCard(club) {
+            const card = document.createElement('div');
+            card.className = 'color-card' + (club.updated ? ' highlight' : '');
+            
+            const swatchStyle = club.secondary 
+                ? `background: linear-gradient(135deg, ${club.primary} 0%, ${club.primary} 50%, ${club.secondary} 50%, ${club.secondary} 100%);`
+                : `background: ${club.primary};`;
+            
+            card.innerHTML = `
+                <div class="color-swatch" style="${swatchStyle}">
+                    <span class="color-label">${club.primary}</span>
+                </div>
+                <div class="color-info">
+                    <div class="club-name">
+                        ${club.name}
+                        ${club.updated ? '<span class="updated-badge">UPDATED</span>' : ''}
+                    </div>
+                    <div class="color-desc">${club.desc}</div>
+                    <div class="color-codes">
+                        <span class="color-chip">${club.primary}</span>
+                        ${club.secondary ? `<span class="color-chip">${club.secondary}</span>` : ''}
+                    </div>
+                </div>
+            `;
+            
+            return card;
+        }
+        
+        const regattaGrid = document.getElementById('regatta-clubs');
+        regattaClubs.forEach(club => {
+            regattaGrid.appendChild(createColorCard(club));
+        });
+        
+        const allGrid = document.getElementById('all-clubs');
+        additionalClubs.forEach(club => {
+            allGrid.appendChild(createColorCard(club));
+        });
+    </script>
+</body>
+</html>

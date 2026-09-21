@@ -1,0 +1,111 @@
+====================================================================================================
+M J14 1x (SINGLES) HEAT ADJUSTMENT ANALYSIS
+Races 135-144 (10 Finals) - Rowing Ireland 1k Classic 2026
+====================================================================================================
+
+Loaded 47 rowers across 9 finals
+Galway crew: Galway, Cummins, J in Final 4
+
+====================================================================================================
+HEAT STATISTICS
+====================================================================================================
+
+Overall mean time: 4:47.7
+
+Heat         Count    Mean         Median       Std Dev   
+------------------------------------------------------------
+Final 1      6        4:37.7       4:34.9       18.37     
+Final 2      6        4:44.2       4:30.8       37.03     
+Final 3      6        4:44.9       4:40.1       22.22     
+Final 4      5        5:18.7       5:09.7       23.81     
+Final 5      6        5:02.9       5:06.9       13.72     
+Final 6      5        4:45.3       4:38.5       13.83     
+Final 7      5        4:17.9       4:18.4       12.59     
+Final 9      4        4:35.6       4:33.6       15.78     
+Final 10     4        5:03.1       4:57.2       33.22     
+
+Fastest heat: Final 7 (4:17.9 average)
+Slowest heat: Final 4 (5:18.7 average)
+Heat speed range: 1:00.8
+
+====================================================================================================
+RAW TIMES (Top 20)
+====================================================================================================
+
+Rank   Crew                                     Heat         Time        
+---------------------------------------------------------------------------
+1      Bantry, Collins, C                       Final 7      3:59.4      
+2      Athlone, Fox, C                          Final 2      4:13.5      
+3      Shandon, Kerr, C                         Final 7      4:14.1      
+4      Fermoy, Mahon, C                         Final 7      4:18.4      
+5      Athlone, Mullally, J                     Final 9      4:18.8      
+6      Waterford, Brady, H                      Final 1      4:19.6      
+7      Bantry, Hennessy, C                      Final 1      4:22.1      
+8      Skibbereen, O Donovan, M                 Final 1      4:23.0      
+9      Offaly, Lowry, F                         Final 3      4:23.5      
+10     Skibbereen, Lupton, L                    Final 7      4:24.2      
+11     KHBC, Huang, A                           Final 3      4:24.9      
+12     St. Michaels, Morgan Gouws, M            Final 3      4:29.1      
+13     Carrick, Kelly,                          Final 2      4:29.8      
+14     Fermoy, Dillon, C                        Final 10     4:30.0      
+15     Castleconnel, Buckley, J                 Final 2      4:30.1      
+16     Bantry, O'Mahony, A                      Final 9      4:30.1      
+17     Cork, Gibson, J                          Final 2      4:31.4      
+18     Athlone, Laffey, F                       Final 7      4:33.3      
+19     Lee, Lyons, J                            Final 6      4:34.9      
+20     Commercial, Nolan, F                     Final 9      4:37.1      
+
+====================================================================================================
+HEAT-ADJUSTED TIMES (Top 20)
+====================================================================================================
+
+Rank   Crew                                     Heat         Raw          Adj      Adjusted    
+-----------------------------------------------------------------------------------------------
+1      Fermoy, Dillon, C                        Final 10     4:30.0       +15.4s  4:14.6      
+2      Athlone, Fox, C                          Final 2      4:13.5        -3.5s  4:17.0      
+3      Lee, Hogan, A                            Final 5      4:38.8       +15.2s  4:23.6      
+4      Cork, Carbery, S                         Final 4      4:56.3       +31.0s  4:25.3      
+5      Offaly, Lowry, F                         Final 3      4:23.5        -2.8s  4:26.3      
+6      KHBC, Huang, A                           Final 3      4:24.9        -2.8s  4:27.7      
+7      Bantry, Collins, C                       Final 7      3:59.4       -29.8s  4:29.2      
+8      Waterford, Brady, H                      Final 1      4:19.6       -10.0s  4:29.6      
+9      Athlone, Mullally, J                     Final 9      4:18.8       -12.1s  4:30.9      
+10     St. Michaels, Morgan Gouws, M            Final 3      4:29.1        -2.8s  4:31.9      
+11     Bantry, Hennessy, C                      Final 1      4:22.1       -10.0s  4:32.1      
+12     Skibbereen, O Donovan, M                 Final 1      4:23.0       -10.0s  4:33.0      
+13     Carrick, Kelly,                          Final 2      4:29.8        -3.5s  4:33.3      
+14     Commercial, Whelan, C                    Final 10     4:48.9       +15.4s  4:33.5      
+15     Castleconnel, Buckley, J                 Final 2      4:30.1        -3.5s  4:33.6      
+16     Galway, Cummins, J                       Final 4      5:05.7       +31.0s  4:34.7        ← GALWAY
+17     Cork, Gibson, J                          Final 2      4:31.4        -3.5s  4:34.9      
+18     Lee, Lyons, J                            Final 6      4:34.9        -2.4s  4:37.3      
+19     Col Iognaid, McCafferty, O               Final 4      5:09.7       +31.0s  4:38.7      
+20     Cork, Goggin, L                          Final 6      4:37.3        -2.4s  4:39.7      
+
+====================================================================================================
+GALWAY CREW ANALYSIS
+====================================================================================================
+
+Galway, Cummins, J
+  Heat: Final 4
+  Raw time: 5:05.7
+  Raw rank: 36/47
+  Heat adjustment: +31.0s
+  Adjusted time: 4:34.7
+  Adjusted rank: 16/47
+  Rank change: +20 positions
+  Position in Final 4: 2/5
+
+====================================================================================================
+SUMMARY & RECOMMENDATIONS
+====================================================================================================
+
+Heat speed variation: 1:00.8
+→ LARGE heat variation - heat adjustment is HIGHLY recommended
+
+Galway performance:
+  Cummins improved from 36 to 16 (+20 positions)
+  Raced in a slower-than-average heat
+
+Full analysis saved to: ~/Documents/GRC/M_J14_1x_Analysis.txt
+Summary CSV saved to: /Users/simonflaherty/Documents/GRC/M_J14_1x_Galway_Summary.csv

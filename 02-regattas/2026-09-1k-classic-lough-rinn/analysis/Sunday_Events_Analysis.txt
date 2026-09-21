@@ -1,0 +1,430 @@
+==========================================================================================
+ROWING IRELAND 1K CLASSIC 2026 - SUNDAY RESULTS
+Heat Adjustment Analysis for Galway Crews
+==========================================================================================
+
+==========================================================================================
+M J15 4x+ HEAT ADJUSTMENT ANALYSIS
+Races 205-210 (6 Finals)
+==========================================================================================
+
+Loaded 25 crews across 5 finals
+Galway crews found: 2
+  - Galway A in Final 4 (Race 208)
+  - Galway B in Final 5 (Race 209)
+
+------------------------------------------------------------------------------------------
+HEAT STATISTICS
+------------------------------------------------------------------------------------------
+
+Overall mean time: 3:42.2
+
+Heat            Count    Mean         Median       Std Dev   
+------------------------------------------------------------
+Final 1         5        3:37.9       3:31.5       21.16     
+Final 2         6        3:40.6       3:36.8       12.37     
+Final 3         5        3:44.4       3:37.1       16.61     
+Final 4         4        3:31.6       3:31.6       9.08      
+Final 5         5        3:54.8       3:56.4       15.39     
+
+Fastest heat: Final 4 (3:31.6 average)
+Slowest heat: Final 5 (3:54.8 average)
+Heat speed range: 23.2s
+
+------------------------------------------------------------------------------------------
+RAW TIMES (No Adjustments)
+------------------------------------------------------------------------------------------
+
+Rank   Crew                                Heat            Time      
+----------------------------------------------------------------------
+1      Methodist A                         Final 4         3:22.1    
+2      St. Michaels A                      Final 1         3:22.7    
+3      Enniskillen A                       Final 1         3:25.4    
+4      Skibbereen                          Final 4         3:25.7    
+5      Castleconnel A                      Final 2         3:26.4    
+6      St Josephs A                        Final 3         3:29.6    
+7      Shandon                             Final 3         3:31.0    
+8      Pres Cork B                         Final 1         3:31.5    
+9      Bann A                              Final 2         3:33.7    
+10     Methodist B                         Final 5         3:33.8    
+11     Cork A                              Final 1         3:35.0    
+12     Newry                               Final 2         3:35.7    
+13     Col Iognaid A                       Final 3         3:37.1    
+14     Castleconnel B                      Final 4         3:37.6    
+15     St. Michaels B                      Final 2         3:37.8    
+16     Galway A                            Final 4         3:40.9     ← GALWAY
+17     Enniskillen C                       Final 5         3:45.5    
+18     Athlone A                           Final 2         3:48.8    
+19     Methodist C                         Final 5         3:56.4    
+20     St Josephs B                        Final 3         3:59.2    
+21     Athlone B                           Final 2         4:01.0    
+22     Col Iognaid B                       Final 3         4:05.2    
+23     Enniskillen D                       Final 5         4:06.7    
+24     Galway B                            Final 5         4:11.4     ← GALWAY
+25     St. Michaels C                      Final 1         4:14.7    
+
+------------------------------------------------------------------------------------------
+HEAT-ADJUSTED TIMES (Mean Method)
+------------------------------------------------------------------------------------------
+Adjusted = Raw - (Heat Mean - Overall Mean)
+
+Rank   Crew                                Heat            Raw        Adj        Heat Adj  
+------------------------------------------------------------------------------------------
+1      Methodist B                         Final 5         3:33.8     3:21.2     +12.6s    
+2      St. Michaels A                      Final 1         3:22.7     3:27.0     -4.3s     
+3      St Josephs A                        Final 3         3:29.6     3:27.4     +2.2s     
+4      Castleconnel A                      Final 2         3:26.4     3:28.0     -1.6s     
+5      Shandon                             Final 3         3:31.0     3:28.8     +2.2s     
+6      Enniskillen A                       Final 1         3:25.4     3:29.7     -4.3s     
+7      Methodist A                         Final 4         3:22.1     3:32.7     -10.6s    
+8      Enniskillen C                       Final 5         3:45.5     3:32.9     +12.6s    
+9      Col Iognaid A                       Final 3         3:37.1     3:34.9     +2.2s     
+10     Bann A                              Final 2         3:33.7     3:35.3     -1.6s     
+11     Pres Cork B                         Final 1         3:31.5     3:35.8     -4.3s     
+12     Skibbereen                          Final 4         3:25.7     3:36.3     -10.6s    
+13     Newry                               Final 2         3:35.7     3:37.3     -1.6s     
+14     Cork A                              Final 1         3:35.0     3:39.3     -4.3s     
+15     St. Michaels B                      Final 2         3:37.8     3:39.4     -1.6s     
+16     Methodist C                         Final 5         3:56.4     3:43.8     +12.6s    
+17     Castleconnel B                      Final 4         3:37.6     3:48.2     -10.6s    
+18     Athlone A                           Final 2         3:48.8     3:50.4     -1.6s     
+19     Galway A                            Final 4         3:40.9     3:51.5     -10.6s     ← GALWAY
+20     Enniskillen D                       Final 5         4:06.7     3:54.1     +12.6s    
+21     St Josephs B                        Final 3         3:59.2     3:57.0     +2.2s     
+22     Galway B                            Final 5         4:11.4     3:58.8     +12.6s     ← GALWAY
+23     Athlone B                           Final 2         4:01.0     4:02.6     -1.6s     
+24     Col Iognaid B                       Final 3         4:05.2     4:03.0     +2.2s     
+25     St. Michaels C                      Final 1         4:14.7     4:19.0     -4.3s     
+
+------------------------------------------------------------------------------------------
+GALWAY CREWS SUMMARY
+------------------------------------------------------------------------------------------
+
+Galway A:
+  Heat: Final 4 (Race 208)
+  Raw Time: 3:40.9 (Rank 16)
+  Heat Adjustment: -10.6s (faster heat)
+  Adjusted Time: 3:51.5 (Rank 19)
+  Position Change: -3 places
+
+Galway B:
+  Heat: Final 5 (Race 209)
+  Raw Time: 4:11.4 (Rank 24)
+  Heat Adjustment: +12.6s (slower heat)
+  Adjusted Time: 3:58.8 (Rank 22)
+  Position Change: +2 places
+
+==========================================================================================
+M J15 2x HEAT ADJUSTMENT ANALYSIS
+Races 233-241 (9 Finals)
+==========================================================================================
+
+Loaded 50 crews across 9 finals
+Galway crews found: 2
+  - Galway A in Final 4 (Race 236)
+  - Galway B in Final 9 (Race 241)
+
+------------------------------------------------------------------------------------------
+HEAT STATISTICS
+------------------------------------------------------------------------------------------
+
+Overall mean time: 4:00.9
+
+Heat            Count    Mean         Median       Std Dev   
+------------------------------------------------------------
+Final 1         5        4:10.0       4:08.8       20.36     
+Final 2         6        3:53.7       3:49.7       15.41     
+Final 3         6        3:53.4       3:54.5       14.22     
+Final 4         6        3:53.7       3:43.8       25.16     
+Final 5         6        4:06.6       4:02.4       24.85     
+Final 6         6        4:05.6       4:01.5       19.17     
+Final 7         5        4:14.6       4:09.5       23.10     
+Final 8         5        4:03.1       3:59.8       18.49     
+Final 9         5        3:49.3       3:46.3       9.24      
+
+Fastest heat: Final 9 (3:49.3 average)
+Slowest heat: Final 7 (4:14.6 average)
+Heat speed range: 25.3s
+
+------------------------------------------------------------------------------------------
+RAW TIMES (No Adjustments)
+------------------------------------------------------------------------------------------
+
+Rank   Crew                                Heat            Time      
+----------------------------------------------------------------------
+1      Skibbereen A                        Final 3         3:31.6    
+2      Shandon A                           Final 4         3:31.6    
+3      St. Michaels B                      Final 2         3:38.7    
+4      Commercial A                        Final 4         3:40.1    
+5      Cork A                              Final 5         3:40.1    
+6      St. Michaels C                      Final 2         3:40.8    
+7      Newry                               Final 9         3:41.9    
+8      Enniskillen A                       Final 6         3:42.7    
+9      Col Iognaid A                       Final 1         3:43.4    
+10     Galway A                            Final 4         3:43.6     ← GALWAY
+11     Castleconnel D                      Final 9         3:44.0    
+12     St. Michaels A                      Final 4         3:44.1    
+13     Enniskillen C                       Final 3         3:45.6    
+14     Carrick A                           Final 9         3:46.3    
+15     Castleconnel A                      Final 2         3:47.5    
+16     Cork B                              Final 8         3:48.6    
+17     Enniskillen B                       Final 9         3:49.2    
+18     Castleconnel B                      Final 8         3:49.3    
+19     Methodist                           Final 3         3:49.8    
+20     Shandon B                           Final 2         3:51.8    
+21     Bann B                              Final 6         3:52.5    
+22     Bann A                              Final 7         3:54.9    
+23     Skibbereen B                        Final 5         3:55.3    
+24     Sligo                               Final 7         3:57.6    
+25     Pres Cork A                         Final 1         3:59.2    
+26     Athlone A                           Final 3         3:59.2    
+27     CRCC                                Final 8         3:59.8    
+28     Lee                                 Final 6         4:00.1    
+29     Enniskillen E                       Final 5         4:00.9    
+30     Pres Cork B                         Final 4         4:01.5    
+31     Athlone C                           Final 3         4:02.5    
+32     Castleconnel C                      Final 6         4:02.9    
+33     Carrick B                           Final 8         4:03.9    
+34     Athlone B                           Final 5         4:04.0    
+35     St. Michaels E                      Final 2         4:04.4    
+36     Galway B                            Final 9         4:05.1     ← GALWAY
+37     Enniskillen D                       Final 5         4:05.7    
+38     St. Michaels D                      Final 1         4:08.8    
+39     St Josephs B                        Final 7         4:09.5    
+40     Waterford                           Final 3         4:12.0    
+41     Col Iognaid B                       Final 7         4:18.7    
+42     St Josephs A                        Final 2         4:19.0    
+43     Col Iognaid C                       Final 6         4:20.1    
+44     Bann C                              Final 1         4:22.9    
+45     Athlone D                           Final 8         4:34.0    
+46     St. Michaels F                      Final 6         4:35.5    
+47     Commercial B                        Final 1         4:35.8    
+48     St Josephs C                        Final 4         4:41.0    
+49     Col Iognaid D                       Final 7         4:52.2    
+50     Castleconnel E                      Final 5         4:53.7    
+
+------------------------------------------------------------------------------------------
+HEAT-ADJUSTED TIMES (Mean Method)
+------------------------------------------------------------------------------------------
+Adjusted = Raw - (Heat Mean - Overall Mean)
+
+Rank   Crew                                Heat            Raw        Adj        Heat Adj  
+------------------------------------------------------------------------------------------
+1      Col Iognaid A                       Final 1         3:43.4     3:34.2     +9.2s     
+2      Cork A                              Final 5         3:40.1     3:34.4     +5.7s     
+3      Enniskillen A                       Final 6         3:42.7     3:37.9     +4.8s     
+4      Shandon A                           Final 4         3:31.6     3:38.8     -7.2s     
+5      Skibbereen A                        Final 3         3:31.6     3:39.0     -7.4s     
+6      Bann A                              Final 7         3:54.9     3:41.2     +13.7s    
+7      Sligo                               Final 7         3:57.6     3:43.9     +13.7s    
+8      St. Michaels B                      Final 2         3:38.7     3:45.9     -7.2s     
+9      Cork B                              Final 8         3:48.6     3:46.3     +2.3s     
+10     Castleconnel B                      Final 8         3:49.3     3:47.0     +2.3s     
+11     Commercial A                        Final 4         3:40.1     3:47.3     -7.2s     
+12     Bann B                              Final 6         3:52.5     3:47.7     +4.8s     
+13     St. Michaels C                      Final 2         3:40.8     3:48.0     -7.2s     
+14     Skibbereen B                        Final 5         3:55.3     3:49.6     +5.7s     
+15     Pres Cork A                         Final 1         3:59.2     3:50.0     +9.2s     
+16     Galway A                            Final 4         3:43.6     3:50.8     -7.2s      ← GALWAY
+17     St. Michaels A                      Final 4         3:44.1     3:51.3     -7.2s     
+18     Enniskillen C                       Final 3         3:45.6     3:53.0     -7.4s     
+19     Newry                               Final 9         3:41.9     3:53.5     -11.6s    
+20     Castleconnel A                      Final 2         3:47.5     3:54.7     -7.2s     
+21     Enniskillen E                       Final 5         4:00.9     3:55.2     +5.7s     
+22     Lee                                 Final 6         4:00.1     3:55.3     +4.8s     
+23     Castleconnel D                      Final 9         3:44.0     3:55.6     -11.6s    
+24     St Josephs B                        Final 7         4:09.5     3:55.8     +13.7s    
+25     Methodist                           Final 3         3:49.8     3:57.2     -7.4s     
+26     CRCC                                Final 8         3:59.8     3:57.5     +2.3s     
+27     Carrick A                           Final 9         3:46.3     3:57.9     -11.6s    
+28     Castleconnel C                      Final 6         4:02.9     3:58.1     +4.8s     
+29     Athlone B                           Final 5         4:04.0     3:58.3     +5.7s     
+30     Shandon B                           Final 2         3:51.8     3:59.0     -7.2s     
+31     St. Michaels D                      Final 1         4:08.8     3:59.6     +9.2s     
+32     Enniskillen D                       Final 5         4:05.7     3:60.0     +5.7s     
+33     Enniskillen B                       Final 9         3:49.2     4:00.8     -11.6s    
+34     Carrick B                           Final 8         4:03.9     4:01.6     +2.3s     
+35     Col Iognaid B                       Final 7         4:18.7     4:05.0     +13.7s    
+36     Athlone A                           Final 3         3:59.2     4:06.6     -7.4s     
+37     Pres Cork B                         Final 4         4:01.5     4:08.7     -7.2s     
+38     Athlone C                           Final 3         4:02.5     4:09.9     -7.4s     
+39     St. Michaels E                      Final 2         4:04.4     4:11.6     -7.2s     
+40     Bann C                              Final 1         4:22.9     4:13.7     +9.2s     
+41     Col Iognaid C                       Final 6         4:20.1     4:15.3     +4.8s     
+42     Galway B                            Final 9         4:05.1     4:16.7     -11.6s     ← GALWAY
+43     Waterford                           Final 3         4:12.0     4:19.4     -7.4s     
+44     St Josephs A                        Final 2         4:19.0     4:26.2     -7.2s     
+45     Commercial B                        Final 1         4:35.8     4:26.6     +9.2s     
+46     St. Michaels F                      Final 6         4:35.5     4:30.7     +4.8s     
+47     Athlone D                           Final 8         4:34.0     4:31.7     +2.3s     
+48     Col Iognaid D                       Final 7         4:52.2     4:38.5     +13.7s    
+49     Castleconnel E                      Final 5         4:53.7     4:48.0     +5.7s     
+50     St Josephs C                        Final 4         4:41.0     4:48.2     -7.2s     
+
+------------------------------------------------------------------------------------------
+GALWAY CREWS SUMMARY
+------------------------------------------------------------------------------------------
+
+Galway A:
+  Heat: Final 4 (Race 236)
+  Raw Time: 3:43.6 (Rank 10)
+  Heat Adjustment: -7.2s (faster heat)
+  Adjusted Time: 3:50.8 (Rank 16)
+  Position Change: -6 places
+
+Galway B:
+  Heat: Final 9 (Race 241)
+  Raw Time: 4:05.1 (Rank 36)
+  Heat Adjustment: -11.6s (faster heat)
+  Adjusted Time: 4:16.7 (Rank 42)
+  Position Change: -6 places
+
+==========================================================================================
+M J14 2x HEAT ADJUSTMENT ANALYSIS
+Races 258-264 (7 Finals)
+==========================================================================================
+
+Loaded 40 crews across 7 finals
+Galway crews found: 1
+  - Galway in Final 5 (Race 262)
+
+------------------------------------------------------------------------------------------
+HEAT STATISTICS
+------------------------------------------------------------------------------------------
+
+Overall mean time: 4:09.4
+
+Heat            Count    Mean         Median       Std Dev   
+------------------------------------------------------------
+Final 1         5        4:11.8       4:18.3       17.42     
+Final 2         6        4:21.8       4:23.2       22.32     
+Final 3         5        4:20.1       4:28.9       18.62     
+Final 4         6        4:01.5       4:02.5       13.94     
+Final 5         6        3:57.8       3:54.8       11.69     
+Final 6         6        4:08.2       3:57.3       32.37     
+Final 7         6        4:06.9       4:05.4       20.09     
+
+Fastest heat: Final 5 (3:57.8 average)
+Slowest heat: Final 2 (4:21.8 average)
+Heat speed range: 24.0s
+
+------------------------------------------------------------------------------------------
+RAW TIMES (No Adjustments)
+------------------------------------------------------------------------------------------
+
+Rank   Crew                                Heat            Time      
+----------------------------------------------------------------------
+1      Fermoy                              Final 7         3:37.7    
+2      Waterford A                         Final 4         3:38.6    
+3      Offaly                              Final 6         3:39.3    
+4      Athlone B                           Final 6         3:40.0    
+5      Bantry B                            Final 1         3:42.2    
+6      Galway                              Final 5         3:47.3     ← GALWAY
+7      Cork B                              Final 5         3:48.6    
+8      Lee A                               Final 6         3:49.2    
+9      Carrick A                           Final 2         3:52.1    
+10     St. Michaels A                      Final 5         3:53.9    
+11     Enniskillen A                       Final 5         3:55.7    
+12     Waterford B                         Final 4         3:56.5    
+13     Shandon                             Final 3         3:56.9    
+14     Col Iognaid A                       Final 7         3:57.7    
+15     Commercial B                        Final 7         3:59.8    
+16     Castleconnel                        Final 4         4:00.1    
+17     Commercial A                        Final 2         4:01.6    
+18     Pres Cork B                         Final 5         4:02.7    
+19     Carrick B                           Final 3         4:03.5    
+20     St Josephs C                        Final 4         4:04.9    
+21     Newry                               Final 6         4:05.4    
+22     Bantry A                            Final 4         4:08.4    
+23     St Josephs A                        Final 1         4:10.9    
+24     Lee B                               Final 7         4:11.1    
+25     Cork A                              Final 1         4:18.3    
+26     Skibbereen B                        Final 7         4:18.8    
+27     Col Iognaid B                       Final 5         4:18.9    
+28     St. Michaels B                      Final 4         4:20.5    
+29     Enniskillen B                       Final 2         4:22.1    
+30     Bann                                Final 1         4:23.0    
+31     Northwest                           Final 2         4:24.3    
+32     Skibbereen A                        Final 1         4:24.8    
+33     Athlone A                           Final 3         4:28.9    
+34     Pres Cork A                         Final 3         4:32.9    
+35     Cork C                              Final 7         4:36.4    
+36     St Josephs D                        Final 3         4:38.3    
+37     St Josephs F                        Final 2         4:39.3    
+38     Carrick C                           Final 6         4:39.4    
+39     St Josephs E                        Final 2         4:51.6    
+40     CRCC                                Final 6         4:55.8    
+
+------------------------------------------------------------------------------------------
+HEAT-ADJUSTED TIMES (Mean Method)
+------------------------------------------------------------------------------------------
+Adjusted = Raw - (Heat Mean - Overall Mean)
+
+Rank   Crew                                Heat            Raw        Adj        Heat Adj  
+------------------------------------------------------------------------------------------
+1      Carrick A                           Final 2         3:52.1     3:39.7     +12.4s    
+2      Bantry B                            Final 1         3:42.2     3:39.8     +2.4s     
+3      Fermoy                              Final 7         3:37.7     3:40.2     -2.5s     
+4      Offaly                              Final 6         3:39.3     3:40.6     -1.3s     
+5      Athlone B                           Final 6         3:40.0     3:41.3     -1.3s     
+6      Shandon                             Final 3         3:56.9     3:46.2     +10.7s    
+7      Waterford A                         Final 4         3:38.6     3:46.5     -7.9s     
+8      Commercial A                        Final 2         4:01.6     3:49.2     +12.4s    
+9      Lee A                               Final 6         3:49.2     3:50.5     -1.3s     
+10     Carrick B                           Final 3         4:03.5     3:52.8     +10.7s    
+11     Galway                              Final 5         3:47.3     3:58.9     -11.6s     ← GALWAY
+12     Cork B                              Final 5         3:48.6     4:00.2     -11.6s    
+13     Col Iognaid A                       Final 7         3:57.7     4:00.2     -2.5s     
+14     Commercial B                        Final 7         3:59.8     4:02.3     -2.5s     
+15     Waterford B                         Final 4         3:56.5     4:04.4     -7.9s     
+16     St. Michaels A                      Final 5         3:53.9     4:05.5     -11.6s    
+17     Newry                               Final 6         4:05.4     4:06.7     -1.3s     
+18     Enniskillen A                       Final 5         3:55.7     4:07.3     -11.6s    
+19     Castleconnel                        Final 4         4:00.1     4:08.0     -7.9s     
+20     St Josephs A                        Final 1         4:10.9     4:08.5     +2.4s     
+21     Enniskillen B                       Final 2         4:22.1     4:09.7     +12.4s    
+22     Northwest                           Final 2         4:24.3     4:11.9     +12.4s    
+23     St Josephs C                        Final 4         4:04.9     4:12.8     -7.9s     
+24     Lee B                               Final 7         4:11.1     4:13.6     -2.5s     
+25     Pres Cork B                         Final 5         4:02.7     4:14.3     -11.6s    
+26     Cork A                              Final 1         4:18.3     4:15.9     +2.4s     
+27     Bantry A                            Final 4         4:08.4     4:16.3     -7.9s     
+28     Athlone A                           Final 3         4:28.9     4:18.2     +10.7s    
+29     Bann                                Final 1         4:23.0     4:20.6     +2.4s     
+30     Skibbereen B                        Final 7         4:18.8     4:21.3     -2.5s     
+31     Pres Cork A                         Final 3         4:32.9     4:22.2     +10.7s    
+32     Skibbereen A                        Final 1         4:24.8     4:22.4     +2.4s     
+33     St Josephs F                        Final 2         4:39.3     4:26.9     +12.4s    
+34     St Josephs D                        Final 3         4:38.3     4:27.6     +10.7s    
+35     St. Michaels B                      Final 4         4:20.5     4:28.4     -7.9s     
+36     Col Iognaid B                       Final 5         4:18.9     4:30.5     -11.6s    
+37     Cork C                              Final 7         4:36.4     4:38.9     -2.5s     
+38     St Josephs E                        Final 2         4:51.6     4:39.2     +12.4s    
+39     Carrick C                           Final 6         4:39.4     4:40.7     -1.3s     
+40     CRCC                                Final 6         4:55.8     4:57.1     -1.3s     
+
+------------------------------------------------------------------------------------------
+GALWAY CREWS SUMMARY
+------------------------------------------------------------------------------------------
+
+Galway:
+  Heat: Final 5 (Race 262)
+  Raw Time: 3:47.3 (Rank 6)
+  Heat Adjustment: -11.6s (faster heat)
+  Adjusted Time: 3:58.9 (Rank 11)
+  Position Change: -5 places
+
+==========================================================================================
+OVERALL GALWAY SUMMARY - SUNDAY EVENTS
+==========================================================================================
+
+M J15 4x+: 25 crews across 5 finals, 23.2s heat variation
+  Galway A: 16 → 19 (-3)
+  Galway B: 24 → 22 (+2)
+
+M J15 2x: 50 crews across 9 finals, 25.3s heat variation
+  Galway A: 10 → 16 (-6)
+  Galway B: 36 → 42 (-6)
+
+M J14 2x: 40 crews across 7 finals, 24.0s heat variation
+  Galway: 6 → 11 (-5)
