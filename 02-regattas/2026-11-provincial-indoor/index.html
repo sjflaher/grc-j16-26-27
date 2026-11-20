@@ -43,6 +43,11 @@
   .note { background:var(--purple); color:#fff; border-radius:10px; padding:12px 14px; margin:14px 0 10px; line-height:1.45; font-size:.95rem; }
   .note strong { color:var(--amber); }
   body:not(.picked) .v { color:#c9c3ba; }
+  .gen { background:#fff; border:1px solid var(--line); border-left:4px solid var(--purple); border-radius:16px; padding:16px 18px 6px; margin-bottom:4vh; }
+  .gen h2 { margin:0 0 2px; font-size:1.15rem; color:var(--purple); }
+  .gen .rel { font-size:.95rem; font-weight:700; color:var(--purple); text-align:right; white-space:nowrap; }
+  .gen .reps .rel { display:block; text-align:center; font-size:.8rem; }
+  .divider { margin:5vh 0 1vh; font-size:1rem; letter-spacing:.15em; text-transform:uppercase; color:var(--grey); border-bottom:1px solid #e3ded6; padding-bottom:.6em; }
   footer { margin-top:6vh; color:var(--grey); font-size:.8rem; }
   @media (max-width:420px) { .steps > li { grid-template-columns:2.8rem 1fr auto; } .reps { grid-column:1 / 4; } }
 </style>
@@ -52,10 +57,41 @@
   <a class="back" href="../../index.html">&larr; GRC Men&rsquo;s J16</a>
   <div class="eyebrow">Galway Rowing Club</div>
   <h1>Provincial Indoor Rowing Championships</h1>
-  <p class="sub">Warm-up and 2k race plan. Pick your name to fill in your numbers. All splits are /500m on the monitor.</p>
+  <p class="sub">Warm-up and 2k race plan. All splits are /500m on the monitor.</p>
 
+  <section class="gen" aria-labelledby="gen-h">
+    <h2 id="gen-h">The plan</h2>
+    <p class="sub" style="margin:0">Same for everyone. Your own numbers are further down.</p>
+
+    <h3>Warm-up &middot; starts 40 min before your race</h3>
+    <ol class="steps">
+      <li><span class="when">&minus;40</span><div class="what"><b>15 min UT2 paddle</b><span>Easy, building into it.</span></div><span class="rel">4&times;18&prime; PB split</span></li>
+      <li><span class="when">&minus;25</span><div class="what"><b>5 min stretching</b><span>Off the erg. Hips, hamstrings, back.</span></div><span></span></li>
+      <li><span class="when">&minus;20</span><div class="what"><b>3 min at AT pace</b><span>Strong but controlled.</span></div><span class="rel">6k test split</span></li>
+      <li><span class="when">&minus;17</span><div class="what"><b>5 min light paddle</b><span>Bring the breathing back down.</span></div><span></span></li>
+      <li><span class="when">&minus;12</span><div class="what"><b>30&Prime; on / 30&Prime; off &times; 4</b><span>Building to race pace. Paddle the 30&Prime; off.</span></div><span></span>
+        <ol class="reps">
+          <li><span>1</span><span class="rel">target +6s</span></li>
+          <li><span>2</span><span class="rel">target +4s</span></li>
+          <li><span>3</span><span class="rel">target +2s</span></li>
+          <li><span>4</span><span class="rel">target</span></li>
+        </ol></li>
+      <li><span class="when">&minus;8</span><div class="what"><b>Find your erg, get set up, race</b><span>Feet, drag factor, monitor on /500m. Stay warm.</span></div><span></span></li>
+    </ol>
+
+    <h3>Race plan &middot; 4 &times; 500m</h3>
+    <ol class="steps">
+      <li class="race"><span class="when">0&ndash;500</span><div class="what"><b>Get out quick, then settle</b><span>Don&rsquo;t go faster than this.</span></div><span class="rel">target &minus;1s</span></li>
+      <li class="race"><span class="when">500&ndash;1k</span><div class="what"><b>Settle onto your number</b><span>Long and controlled.</span></div><span class="rel">target</span></li>
+      <li class="race"><span class="when">1k&ndash;1.5k</span><div class="what"><b>Hold it</b><span>This is the one that decides the race.</span></div><span class="rel">target</span></li>
+      <li class="race"><span class="when">1.5k&ndash;2k</span><div class="what"><b>Your call</b><span>Row whatever you feel. This is the slowest you can go and still hit your 2k target.</span></div><span class="rel">target +1s or faster</span></li>
+    </ol>
+    <div class="note">1 second banked in the first 500 + two 500s on target means you can afford <strong>target + 1 second</strong> on the last 500 and still finish on your 2k target. Anything faster is a bonus.</div>
+  </section>
+
+  <h2 class="divider">Your numbers</h2>
   <div class="tabs" role="tablist" aria-label="Rower">
-      <p>Your numbers</p>
+      <p>Pick your name</p>
       <button type="button" role="tab" aria-selected="false" data-id="fionn">Fionn</button>
       <button type="button" role="tab" aria-selected="false" data-id="daithi">Daithi</button>
       <button type="button" role="tab" aria-selected="false" data-id="jay">Jay</button>
@@ -96,7 +132,6 @@
       <li class="race"><span class="when">1k&ndash;1.5k</span><div class="what"><b>On target</b><span>Hold it. This is the one that decides the race.</span></div><strong class="v" data-k="r3">&mdash;</strong></li>
       <li class="race"><span class="when">1.5k&ndash;2k</span><div class="what"><b>Your call</b><span>Row whatever you feel. The number is the slowest you can go and still hit your 2k target.</span></div><div class="val"><strong class="v" data-k="r4">&mdash;</strong><small>or faster</small></div></li>
     </ol>
-    <div class="note">1 second banked in the first 500 + two 500s on target means you can afford <strong>target + 1 second</strong> on the last 500 and still finish on your 2k target. Anything faster is a bonus.</div>
   </section>
 
   <footer>Good luck, lads. Built and maintained by the J16 coaching group.</footer>
